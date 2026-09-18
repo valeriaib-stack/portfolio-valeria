@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Valeria Ibarra | Portafolio Profesional</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f7f9;
+    color: #263238;
+    line-height: 1.7;
+}
+
+nav {
+    background: #172535;
+    padding: 16px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav strong {
+    color: white;
+    font-size: 21px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 14px;
+}
+
+header {
+    background: linear-gradient(135deg, #172535, #3c6573);
+    color: white;
+    padding: 95px 10%;
+}
+
+header h1 {
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+header h2 {
+    font-size: 23px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+header p {
+    max-width: 760px;
+    font-size: 18px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 27px;
+    background: white;
+    color: #172535;
+    text-decoration: none;
+    padding: 12px 21px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+section {
+    padding: 65px 10%;
+}
+
+section h2 {
+    color: #172535;
+    font-size: 31px;
+    margin-bottom: 25px;
+}
+
+.white {
+    background: white;
+}
+
+.content {
+    max-width: 900px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background: #e5edf0;
+    color: #23414d;
+    padding: 9px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.soft {
+    margin-top: 25px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 26px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+.card h3 {
+    color: #315a69;
+    margin-bottom: 12px;
+}
+
+.tag {
+    display: inline-block;
+    background: #edf2f4;
+    padding: 5px 9px;
+    margin: 12px 3px 0 0;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.timeline {
+    max-width: 900px;
+}
+
+.item {
+    margin-bottom: 23px;
+    border-left: 3px solid #557d89;
+    padding-left: 18px;
+}
+
+.item h3 {
+    color: #315a69;
+}
+
+.study {
+    background: #172535;
+    color: white;
+}
+
+.study h2 {
+    color: white;
+}
+
+.study h3 {
+    margin-top: 25px;
+    margin-bottom: 5px;
+    color: #d8e7eb;
+}
+
+.contact {
+    background: white;
+    text-align: center;
+}
+
+.contact p {
+    margin: 6px;
+}
+
+footer {
+    background: #101a25;
+    color: #ccd5da;
+    text-align: center;
+    padding: 25px;
+}
+
+@media(max-width:700px) {
+    header h1 {
+        font-size: 38px;
+    }
+
+    nav div {
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <strong>VI.</strong>
+
+    <div>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#formacion">Formación</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#caso">Caso de estudio</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+</nav>
+
+
+<header>
+
+<h1>Valeria Ibarra</h1>
+
+<h2>
+Diseñadora de Vestuario | Desarrollo Full Stack Java en formación
+</h2>
+
+<p>
+Soy diseñadora con una trayectoria profesional vinculada al desarrollo
+de productos, proyectos textiles, formación técnica y emprendimiento.
+Actualmente estoy ampliando mi perfil hacia el área tecnológica a
+través de una formación intensiva en Desarrollo Full Stack Java.
+</p>
+
+<p style="margin-top:15px;">
+Me interesa integrar creatividad, experiencia de usuario y tecnología
+para participar en proyectos digitales y continuar desarrollándome
+profesionalmente dentro de la industria TI.
+</p>
+
+<a class="button" href="#proyectos">
+Ver proyectos
+</a>
+
+</header>
+
+
+<section id="sobre-mi" class="white">
+
+<h2>Sobre mí</h2>
+
+<div class="content">
+
+<p>
+Soy Diseñadora de Vestuario con más de 10 años de trayectoria
+profesional en confección, desarrollo de productos textiles,
+emprendimiento y formación técnica.
+</p>
+
+<br>
+
+<p>
+He desarrollado proyectos propios y realizado actividades de formación,
+lo que me ha permitido fortalecer competencias como comunicación,
+creatividad, planificación, resolución de problemas y adaptación
+a distintos contextos y necesidades.
+</p>
+
+<br>
+
+<p>
+Mi interés por incorporar nuevas herramientas a mi desarrollo profesional
+me llevó a acercarme progresivamente al ámbito tecnológico, realizando
+formación relacionada con tecnologías para industrias creativas,
+experiencia de usuario y actualmente Desarrollo Full Stack Java.
+</p>
+
+<br>
+
+<p>
+Mi objetivo es seguir desarrollando competencias técnicas y aportar una
+mirada interdisciplinaria que combine diseño, creatividad, experiencia
+de usuario y tecnología.
+</p>
+
+</div>
+</section>
+
+
+<section id="habilidades">
+
+<h2>Habilidades</h2>
+
+<h3>Competencias técnicas desarrolladas durante mi formación Full Stack</h3>
+
+<br>
+
+<div class="skills">
+
+<span class="skill">Java</span>
+<span class="skill">Spring Boot</span>
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">JavaScript</span>
+<span class="skill">SQL</span>
+<span class="skill">MySQL</span>
+<span class="skill">Git</span>
+<span class="skill">GitHub</span>
+<span class="skill">API REST</span>
+
+</div>
+
+<div class="soft">
+
+<h3>Competencias profesionales</h3>
+
+<br>
+
+<div class="skills">
+
+<span class="skill">Creatividad</span>
+<span class="skill">Comunicación</span>
+<span class="skill">Adaptabilidad</span>
+<span class="skill">Resolución de problemas</span>
+<span class="skill">Aprendizaje continuo</span>
+<span class="skill">Gestión de proyectos</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="formacion" class="white">
+
+<h2>Formación</h2>
+
+<div class="timeline">
+
+<div class="item">
+<h3>Desarrollo Full Stack Java</h3>
+<p>Talento Digital para Chile | 2026</p>
+<p>Formación intensiva en etapa final.</p>
+</div>
+
+<div class="item">
+<h3>UX: Empatizar, Definir e Idear</h3>
+<p>2024</p>
+</div>
+
+<div class="item">
+<h3>Tecnologías para Industrias Creativas</h3>
+<p>Centro para la Revolución Tecnológica en Industrias Creativas – Metaspark AR | 2023</p>
+</div>
+
+<div class="item">
+<h3>Diseño de Vestuario – Mención Alta Costura</h3>
+<p>Instituto Profesional AIEP | 2009</p>
+</div>
+
+<div class="item">
+<h3>Idiomas</h3>
+<p>Inglés intermedio escrito y conversacional.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="proyectos">
+
+<h2>Proyectos de formación Full Stack</h2>
+
+<div class="projects">
+
+
+<div class="card">
+
+<h3>Alke Wallet</h3>
+
+<p>
+Desarrollo de una billetera digital básica como parte de mi formación.
+El proyecto incorpora una interfaz de inicio de sesión, menú principal
+y funcionalidades asociadas a operaciones y visualización de movimientos.
+</p>
+
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<span class="tag">JavaScript</span>
+
+</div>
+
+
+<div class="card">
+
+<h3>Gestor de Tareas</h3>
+
+<p>
+Aplicación desarrollada durante el aprendizaje de Java para trabajar
+la gestión de información, lógica de programación y conceptos de
+programación orientada a objetos.
+</p>
+
+<span class="tag">Java</span>
+<span class="tag">POO</span>
+<span class="tag">Eclipse</span>
+
+</div>
+
+
+<div class="card">
+
+<h3>SpringEduManager</h3>
+
+<p>
+Proyecto desarrollado con Java y Spring Boot orientado a gestionar
+información de alumnos y aplicar conceptos de desarrollo backend
+y servicios REST.
+</p>
+
+<span class="tag">Java</span>
+<span class="tag">Spring Boot</span>
+<span class="tag">API REST</span>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section id="caso" class="study">
+
+<h2>Caso de estudio · SpringEduManager</h2>
+
+<div class="content">
+
+<h3>Descripción de la actividad</h3>
+
+<p>
+Desarrollo de una aplicación utilizando Java y Spring Boot orientada
+a la gestión de información de alumnos y a la aplicación práctica
+de conceptos de desarrollo backend.
+</p>
+
+
+<h3>Desafío principal</h3>
+
+<p>
+El principal desafío fue avanzar desde ejercicios individuales de
+programación hacia una aplicación estructurada con Spring Boot,
+comprendiendo cómo interactúan sus distintos componentes y cómo
+organizar las funcionalidades requeridas.
+</p>
+
+
+<h3>Solución propuesta</h3>
+
+<p>
+Organicé el desarrollo de forma progresiva, implementando los
+componentes requeridos, creando controladores y rutas para gestionar
+la información y realizando pruebas a medida que avanzaba en cada
+funcionalidad.
+</p>
+
+
+<h3>Herramientas técnicas utilizadas</h3>
+
+<p>
+Java, Spring Boot, Eclipse y servicios REST.
+</p>
+
+
+<h3>Principales aprendizajes</h3>
+
+<p>
+Este proyecto me permitió comprender con mayor profundidad la
+estructura de una aplicación Spring Boot, el funcionamiento de
+controladores REST, el manejo de rutas y la importancia de probar
+las funcionalidades progresivamente durante el desarrollo.
+</p>
+
+
+<h3>Resultado e impacto</h3>
+
+<p>
+Logré avanzar desde ejercicios básicos de Java hacia el desarrollo
+de una aplicación backend estructurada, integrando distintos
+conocimientos adquiridos durante el bootcamp en un mismo proyecto.
+</p>
+
+
+<h3>Habilidades técnicas aplicadas</h3>
+
+<p>
+Java, Spring Boot, programación orientada a objetos, servicios REST,
+organización de código, pruebas y resolución de problemas.
+</p>
+
+
+<h3>¿Por qué elegí este proyecto?</h3>
+
+<p>
+Elegí SpringEduManager porque representa uno de los desafíos técnicos
+más completos de mi proceso de formación. Este proyecto refleja mi
+evolución durante el bootcamp, ya que requirió integrar conocimientos
+anteriores, comprender nuevas herramientas y resolver dificultades
+durante el desarrollo.
+</p>
+
+</div>
+
+</section>
+
+
+<section id="contacto" class="contact">
+
+<h2>Contacto</h2>
+
+<p>
+Actualmente estoy interesada en oportunidades Trainee o Junior
+que me permitan continuar desarrollando mis conocimientos
+y adquirir experiencia dentro de la industria tecnológica.
+</p>
+
+<br>
+
+<p><strong>Valeria Ibarra</strong></p>
+
+<p>Santiago, Chile</p>
+
+<p>
+<strong>Email:</strong>
+valeriaibarrabaeza@gmail.com
+</p>
+
+<p>
+<strong>GitHub:</strong>
+valeriaib-stack
+</p>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 Valeria Ibarra · Portafolio Profesional
+</p>
+
+</footer>
+
+
+</body>
+</html>
