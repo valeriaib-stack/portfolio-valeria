@@ -80,6 +80,12 @@ header p {
     font-weight: bold;
 }
 
+.card .button {
+    background: #315a69;
+    color: white;
+    font-size: 14px;
+}
+
 section {
     padding: 65px 10%;
 }
@@ -203,26 +209,23 @@ footer {
 <body>
 
 <nav>
-    <strong>VI.</strong>
+<strong>VI.</strong>
 
-    <div>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#formacion">Formación</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#caso">Caso de estudio</a>
-        <a href="#contacto">Contacto</a>
-    </div>
+<div>
+<a href="#sobre-mi">Sobre mí</a>
+<a href="#habilidades">Habilidades</a>
+<a href="#formacion">Formación</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#caso">Caso de estudio</a>
+<a href="#contacto">Contacto</a>
+</div>
 </nav>
-
 
 <header>
 
 <h1>Valeria Ibarra</h1>
 
-<h2>
-Diseñadora de Vestuario | Desarrollo Full Stack Java en formación
-</h2>
+<h2>Diseñadora de Vestuario | Desarrollo Full Stack Java en formación</h2>
 
 <p>
 Soy diseñadora con una trayectoria profesional vinculada al desarrollo
@@ -237,12 +240,9 @@ para participar en proyectos digitales y continuar desarrollándome
 profesionalmente dentro de la industria TI.
 </p>
 
-<a class="button" href="#proyectos">
-Ver proyectos
-</a>
+<a class="button" href="#proyectos">Ver proyectos</a>
 
 </header>
-
 
 <section id="sobre-mi" class="white">
 
@@ -285,7 +285,6 @@ de usuario y tecnología.
 </div>
 </section>
 
-
 <section id="habilidades">
 
 <h2>Habilidades</h2>
@@ -295,7 +294,6 @@ de usuario y tecnología.
 <br>
 
 <div class="skills">
-
 <span class="skill">Java</span>
 <span class="skill">Spring Boot</span>
 <span class="skill">HTML</span>
@@ -306,7 +304,6 @@ de usuario y tecnología.
 <span class="skill">Git</span>
 <span class="skill">GitHub</span>
 <span class="skill">API REST</span>
-
 </div>
 
 <div class="soft">
@@ -316,20 +313,16 @@ de usuario y tecnología.
 <br>
 
 <div class="skills">
-
 <span class="skill">Creatividad</span>
 <span class="skill">Comunicación</span>
 <span class="skill">Adaptabilidad</span>
 <span class="skill">Resolución de problemas</span>
 <span class="skill">Aprendizaje continuo</span>
 <span class="skill">Gestión de proyectos</span>
-
 </div>
 
 </div>
-
 </section>
-
 
 <section id="formacion" class="white">
 
@@ -364,9 +357,7 @@ de usuario y tecnología.
 </div>
 
 </div>
-
 </section>
-
 
 <section id="proyectos">
 
@@ -374,62 +365,81 @@ de usuario y tecnología.
 
 <div class="projects">
 
-
 <div class="card">
 
-<h3>Alke Wallet</h3>
+<h3>Alke Wallet · Base de Datos</h3>
 
 <p>
-Desarrollo de una billetera digital básica como parte de mi formación.
-El proyecto incorpora una interfaz de inicio de sesión, menú principal
-y funcionalidades asociadas a operaciones y visualización de movimientos.
+Diseño y desarrollo de una base de datos para una billetera digital.
+El proyecto incluye la creación del modelo de datos, script SQL y
+diagrama entidad-relación utilizando MySQL y MySQL Workbench.
 </p>
 
-<span class="tag">HTML</span>
-<span class="tag">CSS</span>
-<span class="tag">JavaScript</span>
+<span class="tag">SQL</span>
+<span class="tag">MySQL</span>
+<span class="tag">Modelo ER</span>
+
+<br>
+
+<a class="button"
+href="https://github.com/valeriaib-stack/AlkeWallet-Database"
+target="_blank">
+Ver proyecto en GitHub
+</a>
 
 </div>
 
-
 <div class="card">
 
-<h3>Gestor de Tareas</h3>
+<h3>SmartTask · Gestor de Tareas</h3>
 
 <p>
-Aplicación desarrollada durante el aprendizaje de Java para trabajar
-la gestión de información, lógica de programación y conceptos de
-programación orientada a objetos.
+Aplicación desarrollada en Java para gestionar tareas, aplicando
+lógica de programación y conceptos de programación orientada a
+objetos como clases, herencia, interfaces y especialización de tareas.
 </p>
 
 <span class="tag">Java</span>
 <span class="tag">POO</span>
 <span class="tag">Eclipse</span>
 
-</div>
+<br>
 
+<a class="button"
+href="https://github.com/valeriaib-stack/SmartTask"
+target="_blank">
+Ver proyecto en GitHub
+</a>
+
+</div>
 
 <div class="card">
 
 <h3>SpringEduManager</h3>
 
 <p>
-Proyecto desarrollado con Java y Spring Boot orientado a gestionar
-información de alumnos y aplicar conceptos de desarrollo backend
-y servicios REST.
+Sistema de gestión de alumnos desarrollado con Java y Spring Boot.
+Integra arquitectura MVC, persistencia con JPA y MySQL, seguridad,
+autenticación por roles y servicios API REST.
 </p>
 
 <span class="tag">Java</span>
 <span class="tag">Spring Boot</span>
+<span class="tag">MySQL</span>
 <span class="tag">API REST</span>
 
+<br>
+
+<a class="button"
+href="https://github.com/valeriaib-stack/SpringEduManager"
+target="_blank">
+Ver proyecto en GitHub
+</a>
+
 </div>
 
-
 </div>
-
 </section>
-
 
 <section id="caso" class="study">
 
@@ -445,7 +455,6 @@ a la gestión de información de alumnos y a la aplicación práctica
 de conceptos de desarrollo backend.
 </p>
 
-
 <h3>Desafío principal</h3>
 
 <p>
@@ -454,7 +463,6 @@ programación hacia una aplicación estructurada con Spring Boot,
 comprendiendo cómo interactúan sus distintos componentes y cómo
 organizar las funcionalidades requeridas.
 </p>
-
 
 <h3>Solución propuesta</h3>
 
@@ -465,40 +473,37 @@ la información y realizando pruebas a medida que avanzaba en cada
 funcionalidad.
 </p>
 
-
 <h3>Herramientas técnicas utilizadas</h3>
 
 <p>
-Java, Spring Boot, Eclipse y servicios REST.
+Java, Spring Boot, Spring MVC, JPA, MySQL, Thymeleaf,
+Spring Security, BCrypt, Eclipse y Postman.
 </p>
-
 
 <h3>Principales aprendizajes</h3>
 
 <p>
 Este proyecto me permitió comprender con mayor profundidad la
-estructura de una aplicación Spring Boot, el funcionamiento de
-controladores REST, el manejo de rutas y la importancia de probar
-las funcionalidades progresivamente durante el desarrollo.
+estructura de una aplicación Spring Boot, la arquitectura MVC,
+la persistencia de datos, el funcionamiento de controladores REST,
+la seguridad por roles y la importancia de probar las funcionalidades
+progresivamente durante el desarrollo.
 </p>
-
 
 <h3>Resultado e impacto</h3>
 
 <p>
 Logré avanzar desde ejercicios básicos de Java hacia el desarrollo
-de una aplicación backend estructurada, integrando distintos
-conocimientos adquiridos durante el bootcamp en un mismo proyecto.
+de una aplicación web estructurada, integrando distintos conocimientos
+adquiridos durante el bootcamp en un mismo proyecto.
 </p>
-
 
 <h3>Habilidades técnicas aplicadas</h3>
 
 <p>
-Java, Spring Boot, programación orientada a objetos, servicios REST,
-organización de código, pruebas y resolución de problemas.
+Java, Spring Boot, programación orientada a objetos, MVC, JPA,
+MySQL, Spring Security, API REST, pruebas y resolución de problemas.
 </p>
-
 
 <h3>¿Por qué elegí este proyecto?</h3>
 
@@ -511,9 +516,7 @@ durante el desarrollo.
 </p>
 
 </div>
-
 </section>
-
 
 <section id="contacto" class="contact">
 
@@ -528,7 +531,6 @@ y adquirir experiencia dentro de la industria tecnológica.
 <br>
 
 <p><strong>Valeria Ibarra</strong></p>
-
 <p>Santiago, Chile</p>
 
 <p>
@@ -543,15 +545,9 @@ valeriaib-stack
 
 </section>
 
-
 <footer>
-
-<p>
-© 2026 Valeria Ibarra · Portafolio Profesional
-</p>
-
+<p>© 2026 Valeria Ibarra · Portafolio Profesional</p>
 </footer>
-
 
 </body>
 </html>
