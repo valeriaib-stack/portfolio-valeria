@@ -4,9 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Valeria Ibarra | Portafolio Profesional</title>
+<title>Valeria Ibarra | Diseño + Tecnología</title>
 
 <style>
+:root {
+    --crema: #f6f0e7;
+    --marfil: #fffaf3;
+    --terracota: #b9634f;
+    --terracota-claro: #dfaa94;
+    --salvia: #78866b;
+    --verde-oscuro: #34443c;
+    --carbon: #292827;
+    --beige: #e8ddcf;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,90 +30,157 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f6f7f9;
-    color: #263238;
+    background: var(--crema);
+    color: var(--carbon);
     line-height: 1.7;
 }
 
+/* NAVEGACIÓN */
+
 nav {
-    background: #172535;
-    padding: 16px 8%;
+    background: rgba(255,250,243,.97);
+    padding: 17px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 20;
+    border-bottom: 1px solid var(--beige);
 }
 
-nav strong {
-    color: white;
-    font-size: 21px;
+.logo {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-style: italic;
+    color: var(--terracota);
 }
 
 nav a {
-    color: white;
+    color: var(--carbon);
     text-decoration: none;
-    margin-left: 18px;
-    font-size: 14px;
+    margin-left: 22px;
+    font-size: 13px;
+    letter-spacing: .5px;
 }
+
+nav a:hover {
+    color: var(--terracota);
+}
+
+/* PORTADA */
 
 header {
-    background: linear-gradient(135deg, #172535, #3c6573);
+    min-height: 620px;
+    background:
+        linear-gradient(115deg,
+        rgba(52,68,60,.97),
+        rgba(52,68,60,.88));
     color: white;
-    padding: 95px 10%;
+    padding: 110px 10%;
+    display: flex;
+    align-items: center;
 }
 
-header h1 {
-    font-size: 50px;
-    margin-bottom: 5px;
+.hero {
+    max-width: 850px;
 }
 
-header h2 {
-    font-size: 23px;
-    font-weight: normal;
+.eyebrow {
+    color: #e7c7b8;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
     margin-bottom: 25px;
 }
 
+header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+    font-size: clamp(52px, 8vw, 88px);
+    line-height: .95;
+    margin-bottom: 22px;
+}
+
+header h2 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-style: italic;
+    color: #f0d8cc;
+    font-size: 25px;
+    margin-bottom: 28px;
+}
+
 header p {
-    max-width: 760px;
-    font-size: 18px;
+    max-width: 720px;
+    font-size: 17px;
+    color: #f5f1eb;
+}
+
+.hero-line {
+    width: 80px;
+    height: 3px;
+    background: var(--terracota-claro);
+    margin: 30px 0;
 }
 
 .button {
     display: inline-block;
-    margin-top: 27px;
-    background: white;
-    color: #172535;
+    margin-top: 28px;
+    background: var(--terracota);
+    color: white;
     text-decoration: none;
     padding: 12px 21px;
-    border-radius: 6px;
+    border-radius: 2px;
+    font-size: 13px;
+    letter-spacing: .5px;
     font-weight: bold;
+    transition: .2s;
 }
 
-.card .button {
-    background: #315a69;
-    color: white;
-    font-size: 14px;
+.button:hover {
+    transform: translateY(-2px);
+    background: #9f5141;
 }
+
+/* SECCIONES */
 
 section {
-    padding: 65px 10%;
+    padding: 80px 10%;
+}
+
+.section-number {
+    color: var(--terracota);
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin-bottom: 6px;
 }
 
 section h2 {
-    color: #172535;
-    font-size: 31px;
-    margin-bottom: 25px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--verde-oscuro);
+    font-size: 39px;
+    font-weight: normal;
+    margin-bottom: 30px;
 }
 
 .white {
-    background: white;
+    background: var(--marfil);
 }
 
 .content {
     max-width: 900px;
 }
+
+.intro {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    line-height: 1.6;
+    color: var(--verde-oscuro);
+    margin-bottom: 25px;
+}
+
+/* HABILIDADES */
 
 .skills {
     display: flex;
@@ -111,61 +189,133 @@ section h2 {
 }
 
 .skill {
-    background: #e5edf0;
-    color: #23414d;
-    padding: 9px 14px;
-    border-radius: 20px;
-    font-weight: bold;
+    background: var(--marfil);
+    color: var(--verde-oscuro);
+    border: 1px solid #d6cbbb;
+    padding: 9px 15px;
+    border-radius: 2px;
+    font-size: 13px;
 }
 
 .soft {
-    margin-top: 25px;
+    margin-top: 35px;
 }
 
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 22px;
+.subtitle {
+    color: var(--terracota);
+    margin-bottom: 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.card {
-    background: white;
-    padding: 26px;
-    border-radius: 10px;
-    box-shadow: 0 3px 12px rgba(0,0,0,.08);
-}
-
-.card h3 {
-    color: #315a69;
-    margin-bottom: 12px;
-}
-
-.tag {
-    display: inline-block;
-    background: #edf2f4;
-    padding: 5px 9px;
-    margin: 12px 3px 0 0;
-    border-radius: 4px;
-    font-size: 12px;
-}
+/* FORMACIÓN */
 
 .timeline {
     max-width: 900px;
 }
 
 .item {
-    margin-bottom: 23px;
-    border-left: 3px solid #557d89;
-    padding-left: 18px;
+    padding: 0 0 27px 22px;
+    border-left: 2px solid var(--terracota-claro);
+    position: relative;
+}
+
+.item::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: var(--terracota);
+    border-radius: 50%;
+    position: absolute;
+    left: -5.5px;
+    top: 8px;
 }
 
 .item h3 {
-    color: #315a69;
+    font-family: Georgia, serif;
+    color: var(--verde-oscuro);
+    font-size: 20px;
+    font-weight: normal;
 }
 
+/* PROYECTOS */
+
+.projects-section {
+    background: #eee5da;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--marfil);
+    padding: 32px;
+    border-radius: 3px;
+    border-top: 5px solid var(--terracota);
+    box-shadow: 0 8px 25px rgba(50,45,40,.07);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:nth-child(2) {
+    border-top-color: var(--salvia);
+}
+
+.card:nth-child(3) {
+    border-top-color: var(--verde-oscuro);
+}
+
+.project-type {
+    color: var(--terracota);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-family: Georgia, serif;
+    color: var(--verde-oscuro);
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 16px;
+}
+
+.card p {
+    flex-grow: 1;
+}
+
+.tags {
+    margin-top: 18px;
+}
+
+.tag {
+    display: inline-block;
+    background: #eee7dd;
+    color: #4d514c;
+    padding: 5px 9px;
+    margin: 3px 3px 0 0;
+    border-radius: 2px;
+    font-size: 11px;
+}
+
+.card .button {
+    align-self: flex-start;
+}
+
+/* CASO DE ESTUDIO */
+
 .study {
-    background: #172535;
-    color: white;
+    background: var(--verde-oscuro);
+    color: #f5f0e8;
+}
+
+.study .section-number {
+    color: var(--terracota-claro);
 }
 
 .study h2 {
@@ -173,34 +323,60 @@ section h2 {
 }
 
 .study h3 {
-    margin-top: 25px;
-    margin-bottom: 5px;
-    color: #d8e7eb;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    color: #efcbbb;
+    font-size: 21px;
+    margin-top: 30px;
+    margin-bottom: 7px;
 }
+
+.study p {
+    max-width: 900px;
+}
+
+/* CONTACTO */
 
 .contact {
-    background: white;
+    background: var(--terracota);
+    color: white;
     text-align: center;
 }
 
-.contact p {
-    margin: 6px;
+.contact h2 {
+    color: white;
 }
+
+.contact .section-number {
+    color: #f4d8ca;
+}
+
+.contact a {
+    color: white;
+}
+
+/* FOOTER */
 
 footer {
-    background: #101a25;
-    color: #ccd5da;
+    background: #292827;
+    color: #d9d1c8;
     text-align: center;
-    padding: 25px;
+    padding: 27px;
+    font-size: 12px;
+    letter-spacing: .5px;
 }
 
-@media(max-width:700px) {
-    header h1 {
-        font-size: 38px;
-    }
-
+@media(max-width: 750px) {
     nav div {
         display: none;
+    }
+
+    header {
+        min-height: 550px;
+    }
+
+    section {
+        padding: 60px 8%;
     }
 }
 </style>
@@ -209,77 +385,74 @@ footer {
 <body>
 
 <nav>
-<strong>VI.</strong>
-
-<div>
-<a href="#sobre-mi">Sobre mí</a>
-<a href="#habilidades">Habilidades</a>
-<a href="#formacion">Formación</a>
-<a href="#proyectos">Proyectos</a>
-<a href="#caso">Caso de estudio</a>
-<a href="#contacto">Contacto</a>
-</div>
+    <div class="logo">Valeria Ibarra</div>
+    <div>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#formacion">Formación</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#caso">Caso de estudio</a>
+        <a href="#contacto">Contacto</a>
+    </div>
 </nav>
 
 <header>
+<div class="hero">
 
-<h1>Valeria Ibarra</h1>
+<div class="eyebrow">DISEÑO · TECNOLOGÍA · DESARROLLO FULL STACK</div>
 
-<h2>Diseñadora de Vestuario | Desarrollo Full Stack Java en formación</h2>
+<h1>Valeria<br>Ibarra</h1>
+
+<h2>Del diseño de productos al diseño de soluciones digitales.</h2>
+
+<div class="hero-line"></div>
 
 <p>
-Soy diseñadora con una trayectoria profesional vinculada al desarrollo
-de productos, proyectos textiles, formación técnica y emprendimiento.
-Actualmente estoy ampliando mi perfil hacia el área tecnológica a
-través de una formación intensiva en Desarrollo Full Stack Java.
+Diseñadora de Vestuario con más de 10 años de trayectoria profesional
+en desarrollo de productos, proyectos textiles, formación técnica y
+emprendimiento. Actualmente amplío mi perfil hacia el área tecnológica
+a través de una formación intensiva en Desarrollo Full Stack Java.
 </p>
 
-<p style="margin-top:15px;">
-Me interesa integrar creatividad, experiencia de usuario y tecnología
-para participar en proyectos digitales y continuar desarrollándome
-profesionalmente dentro de la industria TI.
-</p>
+<a class="button" href="#proyectos">EXPLORAR PROYECTOS</a>
 
-<a class="button" href="#proyectos">Ver proyectos</a>
-
+</div>
 </header>
 
 <section id="sobre-mi" class="white">
 
-<h2>Sobre mí</h2>
+<div class="section-number">01.</div>
+<h2>Diseño, creatividad y tecnología</h2>
 
 <div class="content">
 
+<p class="intro">
+Mi recorrido profesional nace desde el diseño y hoy se expande hacia
+el desarrollo de soluciones digitales.
+</p>
+
 <p>
-Soy Diseñadora de Vestuario con más de 10 años de trayectoria
-profesional en confección, desarrollo de productos textiles,
-emprendimiento y formación técnica.
+Soy Diseñadora de Vestuario con más de 10 años de trayectoria en
+confección, desarrollo de productos textiles, emprendimiento y formación
+técnica.
 </p>
 
 <br>
 
 <p>
-He desarrollado proyectos propios y realizado actividades de formación,
-lo que me ha permitido fortalecer competencias como comunicación,
-creatividad, planificación, resolución de problemas y adaptación
-a distintos contextos y necesidades.
+La experiencia en diseño me ha enseñado a observar necesidades,
+desarrollar ideas, resolver problemas y transformar conceptos en
+productos concretos. Estas mismas capacidades hoy forman parte de
+mi proceso de aprendizaje tecnológico.
 </p>
 
 <br>
 
 <p>
-Mi interés por incorporar nuevas herramientas a mi desarrollo profesional
-me llevó a acercarme progresivamente al ámbito tecnológico, realizando
-formación relacionada con tecnologías para industrias creativas,
-experiencia de usuario y actualmente Desarrollo Full Stack Java.
-</p>
-
-<br>
-
-<p>
-Mi objetivo es seguir desarrollando competencias técnicas y aportar una
-mirada interdisciplinaria que combine diseño, creatividad, experiencia
-de usuario y tecnología.
+Mi formación en tecnologías para industrias creativas, experiencia de
+usuario y Desarrollo Full Stack Java me permite construir un perfil
+interdisciplinario donde conviven creatividad, diseño, lógica y
+programación.
 </p>
 
 </div>
@@ -287,11 +460,10 @@ de usuario y tecnología.
 
 <section id="habilidades">
 
-<h2>Habilidades</h2>
+<div class="section-number">02.</div>
+<h2>Herramientas & habilidades</h2>
 
-<h3>Competencias técnicas desarrolladas durante mi formación Full Stack</h3>
-
-<br>
+<div class="subtitle">Desarrollo Full Stack</div>
 
 <div class="skills">
 <span class="skill">Java</span>
@@ -308,9 +480,7 @@ de usuario y tecnología.
 
 <div class="soft">
 
-<h3>Competencias profesionales</h3>
-
-<br>
+<div class="subtitle">Competencias profesionales</div>
 
 <div class="skills">
 <span class="skill">Creatividad</span>
@@ -319,6 +489,8 @@ de usuario y tecnología.
 <span class="skill">Resolución de problemas</span>
 <span class="skill">Aprendizaje continuo</span>
 <span class="skill">Gestión de proyectos</span>
+<span class="skill">Diseño de productos</span>
+<span class="skill">Experiencia de usuario</span>
 </div>
 
 </div>
@@ -326,6 +498,7 @@ de usuario y tecnología.
 
 <section id="formacion" class="white">
 
+<div class="section-number">03.</div>
 <h2>Formación</h2>
 
 <div class="timeline">
@@ -347,7 +520,7 @@ de usuario y tecnología.
 </div>
 
 <div class="item">
-<h3>Diseño de Vestuario – Mención Alta Costura</h3>
+<h3>Diseño de Vestuario · Mención Alta Costura</h3>
 <p>Instituto Profesional AIEP | 2009</p>
 </div>
 
@@ -359,62 +532,66 @@ de usuario y tecnología.
 </div>
 </section>
 
-<section id="proyectos">
+<section id="proyectos" class="projects-section">
 
-<h2>Proyectos de formación Full Stack</h2>
+<div class="section-number">04.</div>
+<h2>Proyectos seleccionados</h2>
 
 <div class="projects">
 
 <div class="card">
 
-<h3>Alke Wallet · Base de Datos</h3>
+<div class="project-type">Data · MySQL</div>
+<h3>Alke Wallet</h3>
 
 <p>
 Diseño y desarrollo de una base de datos para una billetera digital.
-El proyecto incluye la creación del modelo de datos, script SQL y
-diagrama entidad-relación utilizando MySQL y MySQL Workbench.
+El proyecto incluye modelo de datos, script SQL y diagrama
+entidad-relación utilizando MySQL y MySQL Workbench.
 </p>
 
+<div class="tags">
 <span class="tag">SQL</span>
 <span class="tag">MySQL</span>
 <span class="tag">Modelo ER</span>
-
-<br>
+</div>
 
 <a class="button"
 href="https://github.com/valeriaib-stack/AlkeWallet-Database"
 target="_blank">
-Ver proyecto en GitHub
+VER EN GITHUB
 </a>
 
 </div>
 
 <div class="card">
 
-<h3>SmartTask · Gestor de Tareas</h3>
+<div class="project-type">Java · POO</div>
+<h3>SmartTask</h3>
 
 <p>
 Aplicación desarrollada en Java para gestionar tareas, aplicando
-lógica de programación y conceptos de programación orientada a
-objetos como clases, herencia, interfaces y especialización de tareas.
+programación orientada a objetos mediante clases, herencia,
+interfaces y especialización de tareas.
 </p>
 
+<div class="tags">
 <span class="tag">Java</span>
 <span class="tag">POO</span>
 <span class="tag">Eclipse</span>
-
-<br>
+</div>
 
 <a class="button"
 href="https://github.com/valeriaib-stack/SmartTask"
 target="_blank">
-Ver proyecto en GitHub
+VER EN GITHUB
 </a>
 
 </div>
 
 <div class="card">
 
+<div class="project-type">Backend · Full Stack</div>
 <h3>SpringEduManager</h3>
 
 <p>
@@ -423,17 +600,17 @@ Integra arquitectura MVC, persistencia con JPA y MySQL, seguridad,
 autenticación por roles y servicios API REST.
 </p>
 
+<div class="tags">
 <span class="tag">Java</span>
 <span class="tag">Spring Boot</span>
 <span class="tag">MySQL</span>
 <span class="tag">API REST</span>
-
-<br>
+</div>
 
 <a class="button"
 href="https://github.com/valeriaib-stack/SpringEduManager"
 target="_blank">
-Ver proyecto en GitHub
+VER EN GITHUB
 </a>
 
 </div>
@@ -443,76 +620,56 @@ Ver proyecto en GitHub
 
 <section id="caso" class="study">
 
+<div class="section-number">05.</div>
 <h2>Caso de estudio · SpringEduManager</h2>
 
 <div class="content">
 
-<h3>Descripción de la actividad</h3>
-
+<h3>El proyecto</h3>
 <p>
-Desarrollo de una aplicación utilizando Java y Spring Boot orientada
-a la gestión de información de alumnos y a la aplicación práctica
-de conceptos de desarrollo backend.
+Desarrollo de una aplicación web orientada a la gestión de información
+de alumnos utilizando Java y el ecosistema Spring.
 </p>
 
-<h3>Desafío principal</h3>
-
+<h3>El desafío</h3>
 <p>
-El principal desafío fue avanzar desde ejercicios individuales de
-programación hacia una aplicación estructurada con Spring Boot,
-comprendiendo cómo interactúan sus distintos componentes y cómo
-organizar las funcionalidades requeridas.
+Avanzar desde ejercicios individuales de programación hacia una
+aplicación estructurada, comprendiendo cómo interactúan los distintos
+componentes de Spring Boot.
 </p>
 
-<h3>Solución propuesta</h3>
-
+<h3>El proceso y la solución</h3>
 <p>
-Organicé el desarrollo de forma progresiva, implementando los
-componentes requeridos, creando controladores y rutas para gestionar
-la información y realizando pruebas a medida que avanzaba en cada
-funcionalidad.
+Organicé el desarrollo progresivamente, implementando los componentes
+requeridos, controladores, rutas, persistencia y seguridad, realizando
+pruebas durante cada etapa del proyecto.
 </p>
 
-<h3>Herramientas técnicas utilizadas</h3>
-
+<h3>Herramientas</h3>
 <p>
 Java, Spring Boot, Spring MVC, JPA, MySQL, Thymeleaf,
 Spring Security, BCrypt, Eclipse y Postman.
 </p>
 
-<h3>Principales aprendizajes</h3>
-
+<h3>Aprendizajes</h3>
 <p>
-Este proyecto me permitió comprender con mayor profundidad la
-estructura de una aplicación Spring Boot, la arquitectura MVC,
-la persistencia de datos, el funcionamiento de controladores REST,
-la seguridad por roles y la importancia de probar las funcionalidades
-progresivamente durante el desarrollo.
+El proyecto me permitió comprender con mayor profundidad la arquitectura
+MVC, persistencia de datos, controladores REST, seguridad mediante roles
+y la importancia de probar cada funcionalidad durante el desarrollo.
 </p>
 
-<h3>Resultado e impacto</h3>
-
+<h3>Resultado</h3>
 <p>
-Logré avanzar desde ejercicios básicos de Java hacia el desarrollo
-de una aplicación web estructurada, integrando distintos conocimientos
-adquiridos durante el bootcamp en un mismo proyecto.
+Logré avanzar desde ejercicios básicos de Java hacia una aplicación web
+estructurada, integrando en un único proyecto diferentes conocimientos
+adquiridos durante el bootcamp.
 </p>
 
-<h3>Habilidades técnicas aplicadas</h3>
-
-<p>
-Java, Spring Boot, programación orientada a objetos, MVC, JPA,
-MySQL, Spring Security, API REST, pruebas y resolución de problemas.
-</p>
-
-<h3>¿Por qué elegí este proyecto?</h3>
-
+<h3>¿Por qué este proyecto?</h3>
 <p>
 Elegí SpringEduManager porque representa uno de los desafíos técnicos
-más completos de mi proceso de formación. Este proyecto refleja mi
-evolución durante el bootcamp, ya que requirió integrar conocimientos
-anteriores, comprender nuevas herramientas y resolver dificultades
-durante el desarrollo.
+más completos de mi formación y refleja mi evolución durante el proceso
+de aprendizaje Full Stack.
 </p>
 
 </div>
@@ -520,33 +677,31 @@ durante el desarrollo.
 
 <section id="contacto" class="contact">
 
-<h2>Contacto</h2>
+<div class="section-number">06.</div>
+<h2>Conectemos</h2>
 
 <p>
-Actualmente estoy interesada en oportunidades Trainee o Junior
-que me permitan continuar desarrollando mis conocimientos
-y adquirir experiencia dentro de la industria tecnológica.
+Estoy interesada en oportunidades Trainee o Junior que me permitan
+continuar desarrollando mis conocimientos y aportar una mirada
+interdisciplinaria entre diseño y tecnología.
 </p>
 
 <br>
 
 <p><strong>Valeria Ibarra</strong></p>
 <p>Santiago, Chile</p>
+<p>valeriaibarrabaeza@gmail.com</p>
 
 <p>
-<strong>Email:</strong>
-valeriaibarrabaeza@gmail.com
-</p>
-
-<p>
-<strong>GitHub:</strong>
-valeriaib-stack
+<a href="https://github.com/valeriaib-stack" target="_blank">
+github.com/valeriaib-stack
+</a>
 </p>
 
 </section>
 
 <footer>
-<p>© 2026 Valeria Ibarra · Portafolio Profesional</p>
+© 2026 Valeria Ibarra · Diseño + Tecnología · Portafolio Profesional
 </footer>
 
 </body>
