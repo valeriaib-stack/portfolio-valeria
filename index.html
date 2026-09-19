@@ -7,15 +7,24 @@
 <title>Valeria Ibarra | Diseño + Tecnología</title>
 
 <style>
+
+/* =========================
+   PALETA
+========================= */
+
 :root {
-    --crema: #f6f0e7;
-    --marfil: #fffaf3;
-    --terracota: #b9634f;
-    --terracota-claro: #dfaa94;
-    --salvia: #78866b;
-    --verde-oscuro: #34443c;
-    --carbon: #292827;
-    --beige: #e8ddcf;
+    --blanco: #ffffff;
+    --blanco-calido: #fbfbf8;
+    --piedra: #f1f1ed;
+    --piedra-medio: #deded7;
+    --gris: #666861;
+    --grafito: #272a27;
+
+    /* Verde inspirado en las hojas de tu fotografía */
+    --verde: #56851f;
+    --verde-vivo: #639528;
+    --verde-oscuro: #365a24;
+    --verde-suave: #edf3e8;
 }
 
 * {
@@ -30,157 +39,363 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: var(--crema);
-    color: var(--carbon);
-    line-height: 1.7;
+    background: var(--blanco);
+    color: var(--grafito);
+    line-height: 1.65;
 }
 
-/* NAVEGACIÓN */
+a {
+    color: inherit;
+}
+
+
+/* =========================
+   NAVEGACIÓN
+========================= */
 
 nav {
-    background: rgba(255,250,243,.97);
-    padding: 17px 8%;
+    height: 78px;
+    padding: 0 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    background: rgba(255,255,255,.97);
+    border-bottom: 1px solid #eeeeea;
+
     position: sticky;
     top: 0;
-    z-index: 20;
-    border-bottom: 1px solid var(--beige);
+    z-index: 100;
 }
 
-.logo {
-    font-family: Georgia, serif;
-    font-size: 23px;
-    font-style: italic;
-    color: var(--terracota);
-}
-
-nav a {
-    color: var(--carbon);
-    text-decoration: none;
-    margin-left: 22px;
-    font-size: 13px;
-    letter-spacing: .5px;
-}
-
-nav a:hover {
-    color: var(--terracota);
-}
-
-/* PORTADA */
-
-header {
-    min-height: 620px;
-    background:
-        linear-gradient(115deg,
-        rgba(52,68,60,.97),
-        rgba(52,68,60,.88));
-    color: white;
-    padding: 110px 10%;
+.brand {
     display: flex;
     align-items: center;
+    gap: 13px;
 }
 
+.leaf-logo {
+    font-size: 30px;
+    color: var(--verde);
+}
+
+.brand-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+
+.brand-small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--gris);
+    margin-top: 3px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links a:hover {
+    color: var(--verde);
+}
+
+.nav-button {
+    background: var(--verde);
+    color: white !important;
+    padding: 10px 17px;
+    border-radius: 6px;
+}
+
+.nav-button:hover {
+    background: var(--verde-oscuro);
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
 .hero {
-    max-width: 850px;
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hero-text {
+    padding: 85px 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--blanco-calido);
 }
 
 .eyebrow {
-    color: #e7c7b8;
-    letter-spacing: 4px;
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 25px;
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: var(--gris);
+    margin-bottom: 20px;
 }
 
-header h1 {
+.hero h1 {
     font-family: Georgia, "Times New Roman", serif;
     font-weight: normal;
-    font-size: clamp(52px, 8vw, 88px);
-    line-height: .95;
-    margin-bottom: 22px;
+    font-size: clamp(62px, 7vw, 92px);
+    line-height: .87;
+    margin-bottom: 24px;
 }
 
-header h2 {
-    font-family: Georgia, serif;
-    font-weight: normal;
+.hero-message {
+    font-family: Georgia, "Times New Roman", serif;
     font-style: italic;
-    color: #f0d8cc;
-    font-size: 25px;
-    margin-bottom: 28px;
+    color: var(--verde-oscuro);
+    font-size: 27px;
+    line-height: 1.25;
+    margin: 0 0 27px 55px;
 }
 
-header p {
-    max-width: 720px;
-    font-size: 17px;
-    color: #f5f1eb;
+.green-line {
+    width: 45px;
+    height: 2px;
+    background: var(--verde);
+    margin-bottom: -19px;
 }
 
-.hero-line {
-    width: 80px;
-    height: 3px;
-    background: var(--terracota-claro);
-    margin: 30px 0;
+.hero-description {
+    max-width: 560px;
+    font-size: 15px;
+    color: #454842;
+}
+
+.buttons {
+    margin-top: 29px;
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
 }
 
 .button {
     display: inline-block;
-    margin-top: 28px;
-    background: var(--terracota);
-    color: white;
     text-decoration: none;
-    padding: 12px 21px;
-    border-radius: 2px;
+    background: var(--verde);
+    color: white;
+    padding: 12px 23px;
+    border-radius: 5px;
     font-size: 13px;
-    letter-spacing: .5px;
-    font-weight: bold;
     transition: .2s;
 }
 
 .button:hover {
+    background: var(--verde-oscuro);
     transform: translateY(-2px);
-    background: #9f5141;
 }
 
-/* SECCIONES */
+.button-outline {
+    background: white;
+    color: var(--grafito);
+    border: 1px solid #a7aaa2;
+}
+
+.button-outline:hover {
+    background: var(--verde-suave);
+    color: var(--verde-oscuro);
+}
+
+
+/* Imagen conceptual construida con CSS */
+
+.hero-visual {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(99,149,40,.23), transparent 25%),
+        radial-gradient(circle at 80% 30%, rgba(54,90,36,.16), transparent 24%),
+        linear-gradient(135deg, #f4f3ed 0%, #deddd5 100%);
+}
+
+.hero-visual::before {
+    content: "❧";
+    position: absolute;
+    font-family: Georgia, serif;
+    font-size: 380px;
+    color: rgba(86,133,31,.22);
+    transform: rotate(-28deg);
+    left: -15px;
+    top: -80px;
+}
+
+.sketch-card {
+    position: absolute;
+    width: 52%;
+    min-height: 350px;
+    background: rgba(255,255,255,.89);
+    right: 9%;
+    top: 16%;
+    padding: 45px 30px;
+    transform: rotate(3deg);
+    box-shadow: 0 18px 40px rgba(50,50,45,.13);
+}
+
+.sketch {
+    font-family: Georgia, serif;
+    color: #555852;
+    text-align: center;
+    font-size: 23px;
+    line-height: 1.9;
+}
+
+.sketch-dress {
+    font-size: 80px;
+    color: var(--verde);
+}
+
+.visual-words {
+    position: absolute;
+    bottom: 34px;
+    right: 35px;
+    text-align: right;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #50534d;
+}
+
+
+/* =========================
+   SECCIONES GENERALES
+========================= */
 
 section {
-    padding: 80px 10%;
+    padding: 78px 7%;
 }
 
-.section-number {
-    color: var(--terracota);
-    font-family: Georgia, serif;
-    font-style: italic;
-    margin-bottom: 6px;
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 27px;
 }
 
-section h2 {
+.section-title h2 {
     font-family: Georgia, "Times New Roman", serif;
-    color: var(--verde-oscuro);
-    font-size: 39px;
+    font-size: 36px;
     font-weight: normal;
-    margin-bottom: 30px;
 }
 
-.white {
-    background: var(--marfil);
+.section-title span {
+    width: 48px;
+    height: 2px;
+    background: var(--verde);
 }
 
-.content {
-    max-width: 900px;
+.section-intro {
+    max-width: 800px;
+    font-size: 16px;
+    color: #555852;
 }
 
-.intro {
-    font-family: Georgia, serif;
-    font-size: 23px;
-    line-height: 1.6;
+
+/* =========================
+   SOBRE MÍ
+========================= */
+
+.about {
+    background: white;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.nature-card {
+    min-height: 350px;
+    background:
+        linear-gradient(rgba(255,255,255,.05), rgba(255,255,255,.05)),
+        linear-gradient(135deg, #e6e8df, #cfd5c7);
+    position: relative;
+    overflow: hidden;
+}
+
+.nature-card::before {
+    content: "❧";
+    position: absolute;
+    color: rgba(70,115,35,.55);
+    font-size: 300px;
+    left: -30px;
+    top: -75px;
+    transform: rotate(-20deg);
+}
+
+.fabric-label {
+    background: #e8e5db;
+    border: 1px solid #c8c4b9;
+    padding: 30px 28px;
+    position: absolute;
+    width: 220px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(-4deg);
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 12px;
+    box-shadow: 0 8px 20px rgba(50,50,45,.1);
+}
+
+.fabric-label strong {
     color: var(--verde-oscuro);
-    margin-bottom: 25px;
 }
 
-/* HABILIDADES */
+.values {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 38px;
+}
+
+.value {
+    text-align: center;
+    color: var(--gris);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.value-icon {
+    display: block;
+    font-size: 28px;
+    color: var(--verde);
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   HABILIDADES
+========================= */
+
+.skills-section {
+    background: var(--blanco-calido);
+}
+
+.skill-group {
+    margin-top: 28px;
+}
+
+.skill-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--gris);
+    margin-bottom: 13px;
+}
 
 .skills {
     display: flex;
@@ -189,390 +404,573 @@ section h2 {
 }
 
 .skill {
-    background: var(--marfil);
-    color: var(--verde-oscuro);
-    border: 1px solid #d6cbbb;
-    padding: 9px 15px;
-    border-radius: 2px;
-    font-size: 13px;
+    background: var(--piedra);
+    border: 1px solid #e6e6df;
+    padding: 8px 14px;
+    border-radius: 7px;
+    font-size: 12px;
+    color: #4c4f49;
 }
 
-.soft {
-    margin-top: 35px;
-}
 
-.subtitle {
-    color: var(--terracota);
-    margin-bottom: 15px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-/* FORMACIÓN */
-
-.timeline {
-    max-width: 900px;
-}
-
-.item {
-    padding: 0 0 27px 22px;
-    border-left: 2px solid var(--terracota-claro);
-    position: relative;
-}
-
-.item::before {
-    content: "";
-    width: 9px;
-    height: 9px;
-    background: var(--terracota);
-    border-radius: 50%;
-    position: absolute;
-    left: -5.5px;
-    top: 8px;
-}
-
-.item h3 {
-    font-family: Georgia, serif;
-    color: var(--verde-oscuro);
-    font-size: 20px;
-    font-weight: normal;
-}
-
-/* PROYECTOS */
+/* =========================
+   PROYECTOS
+========================= */
 
 .projects-section {
-    background: #eee5da;
+    background: white;
 }
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 27px;
 }
 
-.card {
-    background: var(--marfil);
-    padding: 32px;
-    border-radius: 3px;
-    border-top: 5px solid var(--terracota);
-    box-shadow: 0 8px 25px rgba(50,45,40,.07);
+.project {
+    border: 1px solid #e5e5df;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: .25s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(60,65,55,.09);
+}
+
+.project-image {
+    height: 180px;
+    background: linear-gradient(145deg, #eef0e9, #d5dacd);
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.card:nth-child(2) {
-    border-top-color: var(--salvia);
+.project-image::before {
+    content: "⌨";
+    font-size: 65px;
+    color: var(--verde-oscuro);
 }
 
-.card:nth-child(3) {
-    border-top-color: var(--verde-oscuro);
+.project:nth-child(2) .project-image::before {
+    content: "✓";
 }
 
-.project-type {
-    color: var(--terracota);
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+.project:nth-child(3) .project-image::before {
+    content: "{ }";
+}
+
+.project-image::after {
+    content: "";
+    width: 120px;
+    height: 120px;
+    background: rgba(99,149,40,.12);
+    border-radius: 50%;
+    position: absolute;
+    right: -25px;
+    top: -30px;
+}
+
+.project-content {
+    padding: 24px;
+}
+
+.project h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
     margin-bottom: 10px;
 }
 
-.card h3 {
-    font-family: Georgia, serif;
-    color: var(--verde-oscuro);
-    font-size: 25px;
-    font-weight: normal;
-    margin-bottom: 16px;
-}
-
-.card p {
-    flex-grow: 1;
+.project p {
+    color: var(--gris);
+    font-size: 13px;
+    min-height: 90px;
 }
 
 .tags {
-    margin-top: 18px;
+    margin: 14px 0;
 }
 
 .tag {
     display: inline-block;
-    background: #eee7dd;
-    color: #4d514c;
+    background: var(--piedra);
     padding: 5px 9px;
     margin: 3px 3px 0 0;
-    border-radius: 2px;
-    font-size: 11px;
+    border-radius: 5px;
+    font-size: 10px;
 }
 
-.card .button {
-    align-self: flex-start;
+.github-link {
+    color: var(--verde-oscuro);
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid var(--verde);
 }
 
-/* CASO DE ESTUDIO */
-
-.study {
-    background: var(--verde-oscuro);
-    color: #f5f0e8;
+.github-link:hover {
+    color: var(--verde-vivo);
 }
 
-.study .section-number {
-    color: var(--terracota-claro);
+
+/* =========================
+   CASO DE ESTUDIO
+========================= */
+
+.case-study {
+    background: var(--verde-suave);
 }
 
-.study h2 {
-    color: white;
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 35px;
+    margin-top: 35px;
 }
 
-.study h3 {
+.case-box {
+    background: rgba(255,255,255,.82);
+    padding: 28px;
+    border-left: 3px solid var(--verde);
+}
+
+.case-box h3 {
     font-family: Georgia, serif;
+    font-size: 20px;
     font-weight: normal;
-    color: #efcbbb;
-    font-size: 21px;
-    margin-top: 30px;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
+    color: var(--verde-oscuro);
 }
 
-.study p {
-    max-width: 900px;
+.case-box p {
+    font-size: 13px;
+    color: #565a53;
 }
 
-/* CONTACTO */
+
+/* =========================
+   FORMACIÓN
+========================= */
+
+.education {
+    background: var(--blanco-calido);
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    border-top: 1px solid #c8cac3;
+    margin-top: 45px;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 25px 18px 0 10px;
+    border-left: 1px solid #dedfd9;
+    min-height: 150px;
+}
+
+.timeline-item::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: var(--verde);
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.year {
+    font-size: 12px;
+    color: var(--gris);
+}
+
+.timeline-item strong {
+    display: block;
+    font-size: 13px;
+    margin: 4px 0;
+}
+
+.timeline-item p {
+    font-size: 12px;
+    color: var(--gris);
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
 
 .contact {
-    background: var(--terracota);
-    color: white;
-    text-align: center;
+    background: white;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.handwritten {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--verde-oscuro);
 }
 
 .contact h2 {
-    color: white;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 13px;
 }
 
-.contact .section-number {
-    color: #f4d8ca;
-}
-
+.contact p,
 .contact a {
-    color: white;
+    font-size: 13px;
+    color: #555852;
 }
 
-/* FOOTER */
+.quote {
+    font-family: Georgia, serif;
+    font-size: 20px !important;
+    color: var(--grafito) !important;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    background: #292827;
-    color: #d9d1c8;
+    background: var(--piedra);
+    padding: 25px 7%;
     text-align: center;
-    padding: 27px;
-    font-size: 12px;
-    letter-spacing: .5px;
+    font-size: 10px;
+    color: var(--gris);
+    letter-spacing: 1px;
 }
 
-@media(max-width: 750px) {
-    nav div {
+
+/* =========================
+   CELULAR
+========================= */
+
+@media(max-width: 850px) {
+
+    .nav-links {
         display: none;
     }
 
-    header {
-        min-height: 550px;
+    .hero {
+        grid-template-columns: 1fr;
     }
 
-    section {
-        padding: 60px 8%;
+    .hero-visual {
+        min-height: 420px;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .case-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        grid-template-columns: 1fr;
+        border-top: none;
+        border-left: 1px solid #ccc;
+    }
+
+    .timeline-item {
+        border-left: none;
+    }
+
+    .timeline-item::before {
+        top: 28px;
+    }
+
+    .values {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
     }
 }
+
 </style>
 </head>
 
 <body>
 
+
+<!-- NAVEGACIÓN -->
+
 <nav>
-    <div class="logo">Valeria Ibarra</div>
+
+<div class="brand">
+    <div class="leaf-logo">♧</div>
     <div>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#formacion">Formación</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#caso">Caso de estudio</a>
-        <a href="#contacto">Contacto</a>
+        <div class="brand-name">VALERIA IBARRA</div>
+        <span class="brand-small">DISEÑO + TECNOLOGÍA</span>
     </div>
+</div>
+
+<div class="nav-links">
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#formacion">Formación</a>
+    <a href="#contacto">Contacto</a>
+    <a class="nav-button" href="#contacto">Conectemos →</a>
+</div>
+
 </nav>
 
-<header>
-<div class="hero">
 
-<div class="eyebrow">DISEÑO · TECNOLOGÍA · DESARROLLO FULL STACK</div>
+<!-- PORTADA -->
+
+<header id="inicio" class="hero">
+
+<div class="hero-text">
+
+<p class="eyebrow">
+DISEÑO · TECNOLOGÍA · IMPACTO REAL
+</p>
 
 <h1>Valeria<br>Ibarra</h1>
 
-<h2>Del diseño de productos al diseño de soluciones digitales.</h2>
+<div class="green-line"></div>
 
-<div class="hero-line"></div>
-
-<p>
-Diseñadora de Vestuario con más de 10 años de trayectoria profesional
-en desarrollo de productos, proyectos textiles, formación técnica y
-emprendimiento. Actualmente amplío mi perfil hacia el área tecnológica
-a través de una formación intensiva en Desarrollo Full Stack Java.
+<p class="hero-message">
+Diseño ideas.<br>
+Desarrollo soluciones.
 </p>
 
-<a class="button" href="#proyectos">EXPLORAR PROYECTOS</a>
+<p class="hero-description">
+Diseñadora de Vestuario con más de 10 años de experiencia en
+desarrollo de productos textiles, formación técnica y emprendimiento.
+Actualmente en formación Full Stack Java, uniendo creatividad,
+diseño y tecnología para crear soluciones con sentido.
+</p>
+
+<div class="buttons">
+<a class="button" href="#proyectos">
+Ver mis proyectos →
+</a>
+
+<a class="button button-outline" href="#sobre-mi">
+Conoce más
+</a>
+</div>
 
 </div>
+
+
+<div class="hero-visual">
+
+<div class="sketch-card">
+<div class="sketch">
+<div class="sketch-dress">♧</div>
+Diseña<br>
+Crea<br>
+Desarrolla<br>
+Transforma
+</div>
+</div>
+
+<div class="visual-words">
+MODA<br>
+TECNOLOGÍA<br>
+SUSTENTABILIDAD
+</div>
+
+</div>
+
 </header>
 
-<section id="sobre-mi" class="white">
 
-<div class="section-number">01.</div>
-<h2>Diseño, creatividad y tecnología</h2>
+<!-- SOBRE MI -->
 
-<div class="content">
+<section id="sobre-mi" class="about">
 
-<p class="intro">
-Mi recorrido profesional nace desde el diseño y hoy se expande hacia
-el desarrollo de soluciones digitales.
-</p>
+<div class="about-layout">
 
-<p>
-Soy Diseñadora de Vestuario con más de 10 años de trayectoria en
-confección, desarrollo de productos textiles, emprendimiento y formación
-técnica.
-</p>
+<div class="nature-card">
 
-<br>
-
-<p>
-La experiencia en diseño me ha enseñado a observar necesidades,
-desarrollar ideas, resolver problemas y transformar conceptos en
-productos concretos. Estas mismas capacidades hoy forman parte de
-mi proceso de aprendizaje tecnológico.
-</p>
-
-<br>
-
-<p>
-Mi formación en tecnologías para industrias creativas, experiencia de
-usuario y Desarrollo Full Stack Java me permite construir un perfil
-interdisciplinario donde conviven creatividad, diseño, lógica y
-programación.
-</p>
+<div class="fabric-label">
+<strong>IDEAS</strong><br>
+PERSONAS<br>
+MATERIALES<br><br>
+UN FUTURO MEJOR
+</div>
 
 </div>
+
+
+<div>
+
+<div class="section-title">
+<h2>Sobre mí</h2>
+<span></span>
+</div>
+
+<p class="section-intro">
+Creo en el poder del diseño y la tecnología para generar un impacto
+positivo. Mi experiencia en vestuario me ha enseñado a observar
+necesidades, resolver problemas y transformar ideas en productos
+concretos. Hoy aplico esa misma mirada en el desarrollo de soluciones
+digitales.
+</p>
+
+<div class="values">
+
+<div class="value">
+<span class="value-icon">♧</span>
+Creatividad<br>con propósito
+</div>
+
+<div class="value">
+<span class="value-icon">⌨</span>
+Aprendizaje<br>continuo
+</div>
+
+<div class="value">
+<span class="value-icon">◎</span>
+Trabajo<br>colaborativo
+</div>
+
+<div class="value">
+<span class="value-icon">◉</span>
+Soluciones<br>del mundo real
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="habilidades">
 
-<div class="section-number">02.</div>
-<h2>Herramientas & habilidades</h2>
+<!-- HABILIDADES -->
 
-<div class="subtitle">Desarrollo Full Stack</div>
+<section id="habilidades" class="skills-section">
+
+<div class="section-title">
+<h2>Habilidades</h2>
+<span></span>
+</div>
+
+<div class="skill-group">
+
+<div class="skill-label">HERRAMIENTAS TÉCNICAS</div>
 
 <div class="skills">
 <span class="skill">Java</span>
 <span class="skill">Spring Boot</span>
-<span class="skill">HTML</span>
-<span class="skill">CSS</span>
+<span class="skill">HTML5</span>
+<span class="skill">CSS3</span>
 <span class="skill">JavaScript</span>
-<span class="skill">SQL</span>
 <span class="skill">MySQL</span>
 <span class="skill">Git</span>
 <span class="skill">GitHub</span>
 <span class="skill">API REST</span>
 </div>
 
-<div class="soft">
+</div>
 
-<div class="subtitle">Competencias profesionales</div>
+
+<div class="skill-group">
+
+<div class="skill-label">COMPETENCIAS</div>
 
 <div class="skills">
-<span class="skill">Creatividad</span>
+<span class="skill">Diseño de productos</span>
+<span class="skill">Gestión de proyectos</span>
+<span class="skill">Resolución de problemas</span>
 <span class="skill">Comunicación</span>
 <span class="skill">Adaptabilidad</span>
-<span class="skill">Resolución de problemas</span>
-<span class="skill">Aprendizaje continuo</span>
-<span class="skill">Gestión de proyectos</span>
-<span class="skill">Diseño de productos</span>
 <span class="skill">Experiencia de usuario</span>
 </div>
 
 </div>
+
 </section>
 
-<section id="formacion" class="white">
 
-<div class="section-number">03.</div>
-<h2>Formación</h2>
-
-<div class="timeline">
-
-<div class="item">
-<h3>Desarrollo Full Stack Java</h3>
-<p>Talento Digital para Chile | 2026</p>
-<p>Formación intensiva en etapa final.</p>
-</div>
-
-<div class="item">
-<h3>UX: Empatizar, Definir e Idear</h3>
-<p>2024</p>
-</div>
-
-<div class="item">
-<h3>Tecnologías para Industrias Creativas</h3>
-<p>Centro para la Revolución Tecnológica en Industrias Creativas – Metaspark AR | 2023</p>
-</div>
-
-<div class="item">
-<h3>Diseño de Vestuario · Mención Alta Costura</h3>
-<p>Instituto Profesional AIEP | 2009</p>
-</div>
-
-<div class="item">
-<h3>Idiomas</h3>
-<p>Inglés intermedio escrito y conversacional.</p>
-</div>
-
-</div>
-</section>
+<!-- PROYECTOS -->
 
 <section id="proyectos" class="projects-section">
 
-<div class="section-number">04.</div>
-<h2>Proyectos seleccionados</h2>
+<div class="section-title">
+<h2>Proyectos</h2>
+<span></span>
+</div>
 
 <div class="projects">
 
-<div class="card">
 
-<div class="project-type">Data · MySQL</div>
+<!-- ALKE WALLET -->
+
+<article class="project">
+
+<div class="project-image"></div>
+
+<div class="project-content">
+
 <h3>Alke Wallet</h3>
 
 <p>
-Diseño y desarrollo de una base de datos para una billetera digital.
-El proyecto incluye modelo de datos, script SQL y diagrama
-entidad-relación utilizando MySQL y MySQL Workbench.
+Diseño y desarrollo de una base de datos para una billetera digital,
+incluyendo modelo de datos, script SQL y diagrama entidad-relación.
 </p>
 
 <div class="tags">
-<span class="tag">SQL</span>
 <span class="tag">MySQL</span>
+<span class="tag">SQL</span>
 <span class="tag">Modelo ER</span>
 </div>
 
-<a class="button"
+<a class="github-link"
 href="https://github.com/valeriaib-stack/AlkeWallet-Database"
 target="_blank">
-VER EN GITHUB
+Ver en GitHub →
 </a>
 
 </div>
+</article>
 
-<div class="card">
 
-<div class="project-type">Java · POO</div>
+<!-- SMART TASK -->
+
+<article class="project">
+
+<div class="project-image"></div>
+
+<div class="project-content">
+
 <h3>SmartTask</h3>
 
 <p>
-Aplicación desarrollada en Java para gestionar tareas, aplicando
-programación orientada a objetos mediante clases, herencia,
-interfaces y especialización de tareas.
+Aplicación desarrollada en Java para gestionar tareas, utilizando
+programación orientada a objetos con clases, herencia e interfaces.
 </p>
 
 <div class="tags">
@@ -581,23 +979,29 @@ interfaces y especialización de tareas.
 <span class="tag">Eclipse</span>
 </div>
 
-<a class="button"
+<a class="github-link"
 href="https://github.com/valeriaib-stack/SmartTask"
 target="_blank">
-VER EN GITHUB
+Ver en GitHub →
 </a>
 
 </div>
+</article>
 
-<div class="card">
 
-<div class="project-type">Backend · Full Stack</div>
+<!-- SPRING EDU MANAGER -->
+
+<article class="project">
+
+<div class="project-image"></div>
+
+<div class="project-content">
+
 <h3>SpringEduManager</h3>
 
 <p>
-Sistema de gestión de alumnos desarrollado con Java y Spring Boot.
-Integra arquitectura MVC, persistencia con JPA y MySQL, seguridad,
-autenticación por roles y servicios API REST.
+Sistema de gestión de alumnos desarrollado con Java y Spring Boot,
+integrando seguridad, persistencia y servicios API REST.
 </p>
 
 <div class="tags">
@@ -607,102 +1011,155 @@ autenticación por roles y servicios API REST.
 <span class="tag">API REST</span>
 </div>
 
-<a class="button"
+<a class="github-link"
 href="https://github.com/valeriaib-stack/SpringEduManager"
 target="_blank">
-VER EN GITHUB
+Ver en GitHub →
 </a>
 
 </div>
+</article>
 
 </div>
+
 </section>
 
-<section id="caso" class="study">
 
-<div class="section-number">05.</div>
+<!-- CASO DE ESTUDIO -->
+
+<section class="case-study">
+
+<div class="section-title">
 <h2>Caso de estudio · SpringEduManager</h2>
+<span></span>
+</div>
 
-<div class="content">
-
-<h3>El proyecto</h3>
-<p>
-Desarrollo de una aplicación web orientada a la gestión de información
-de alumnos utilizando Java y el ecosistema Spring.
+<p class="section-intro">
+Uno de los proyectos que mejor representa mi evolución durante la
+formación Full Stack Java.
 </p>
 
+<div class="case-grid">
+
+<div class="case-box">
 <h3>El desafío</h3>
 <p>
-Avanzar desde ejercicios individuales de programación hacia una
-aplicación estructurada, comprendiendo cómo interactúan los distintos
-componentes de Spring Boot.
+Pasar desde ejercicios individuales de programación hacia una
+aplicación web estructurada, comprendiendo la interacción entre
+los diferentes componentes de Spring Boot.
 </p>
+</div>
 
-<h3>El proceso y la solución</h3>
+<div class="case-box">
+<h3>La solución</h3>
 <p>
-Organicé el desarrollo progresivamente, implementando los componentes
-requeridos, controladores, rutas, persistencia y seguridad, realizando
-pruebas durante cada etapa del proyecto.
+Desarrollé progresivamente controladores, rutas, persistencia,
+seguridad y servicios, realizando pruebas durante cada etapa
+del proyecto.
 </p>
+</div>
 
-<h3>Herramientas</h3>
+<div class="case-box">
+<h3>El aprendizaje</h3>
 <p>
-Java, Spring Boot, Spring MVC, JPA, MySQL, Thymeleaf,
-Spring Security, BCrypt, Eclipse y Postman.
+Profundicé en arquitectura MVC, persistencia de datos,
+controladores REST y seguridad mediante roles, integrando
+distintos conocimientos en una sola aplicación.
 </p>
-
-<h3>Aprendizajes</h3>
-<p>
-El proyecto me permitió comprender con mayor profundidad la arquitectura
-MVC, persistencia de datos, controladores REST, seguridad mediante roles
-y la importancia de probar cada funcionalidad durante el desarrollo.
-</p>
-
-<h3>Resultado</h3>
-<p>
-Logré avanzar desde ejercicios básicos de Java hacia una aplicación web
-estructurada, integrando en un único proyecto diferentes conocimientos
-adquiridos durante el bootcamp.
-</p>
-
-<h3>¿Por qué este proyecto?</h3>
-<p>
-Elegí SpringEduManager porque representa uno de los desafíos técnicos
-más completos de mi formación y refleja mi evolución durante el proceso
-de aprendizaje Full Stack.
-</p>
+</div>
 
 </div>
+
 </section>
+
+
+<!-- FORMACIÓN -->
+
+<section id="formacion" class="education">
+
+<div class="section-title">
+<h2>Formación</h2>
+<span></span>
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<span class="year">2026</span>
+<strong>Desarrollo Full Stack Java</strong>
+<p>Talento Digital para Chile</p>
+<p>En curso</p>
+</div>
+
+<div class="timeline-item">
+<span class="year">2024</span>
+<strong>UX: Empatizar, Definir e Idear</strong>
+</div>
+
+<div class="timeline-item">
+<span class="year">2023</span>
+<strong>Tecnologías para Industrias Creativas</strong>
+<p>Metaspark AR</p>
+</div>
+
+<div class="timeline-item">
+<span class="year">2009</span>
+<strong>Diseño de Vestuario</strong>
+<p>AIEP</p>
+<p>Mención Alta Costura</p>
+</div>
+
+<div class="timeline-item">
+<span class="year">Idiomas</span>
+<strong>Inglés</strong>
+<p>Intermedio</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACTO -->
 
 <section id="contacto" class="contact">
 
-<div class="section-number">06.</div>
+<div class="contact-layout">
+
+<div class="handwritten">
+Ropa con historia.<br>
+Tecnología con propósito.
+</div>
+
+<div>
 <h2>Conectemos</h2>
+<p>✉ valeriaibarrabaeza@gmail.com</p>
+<p>⌖ Santiago, Chile</p>
 
 <p>
-Estoy interesada en oportunidades Trainee o Junior que me permitan
-continuar desarrollando mis conocimientos y aportar una mirada
-interdisciplinaria entre diseño y tecnología.
-</p>
-
-<br>
-
-<p><strong>Valeria Ibarra</strong></p>
-<p>Santiago, Chile</p>
-<p>valeriaibarrabaeza@gmail.com</p>
-
-<p>
-<a href="https://github.com/valeriaib-stack" target="_blank">
-github.com/valeriaib-stack
+<a href="https://github.com/valeriaib-stack"
+target="_blank">
+GitHub · valeriaib-stack
 </a>
 </p>
+</div>
+
+<div>
+<p class="quote">
+“Un futuro más creativo,<br>
+tecnológico y sostenible es posible.”
+</p>
+</div>
+
+</div>
 
 </section>
+
 
 <footer>
 © 2026 Valeria Ibarra · Diseño + Tecnología · Portafolio Profesional
 </footer>
+
 
 </body>
 </html>
