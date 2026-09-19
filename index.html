@@ -8,659 +8,667 @@
 
 <style>
 
-/* ================================
+/* =========================
    PALETA
-================================ */
+========================= */
 
-:root{
-    --verde:#5f852d;
-    --verde-hoja:#6f9139;
-    --verde-oscuro:#456522;
-    --verde-suave:#eef3e7;
+:root {
+    --verde: #657f45;
+    --verde-oscuro: #4d6534;
+    --verde-suave: #eef2e9;
 
-    --blanco:#ffffff;
-    --blanco-calido:#fdfdfb;
+    --blanco: #ffffff;
+    --blanco-calido: #fcfcfa;
 
-    --piedra:#777a73;
-    --piedra-claro:#f1f1ed;
+    --piedra: #777a74;
+    --piedra-claro: #f0f0ec;
 
-    --texto:#292c28;
-    --texto-suave:#5e625c;
-    --linea:#dedfd9;
+    --texto: #292c29;
+    --texto-suave: #5c605a;
+    --borde: #dedfd9;
 }
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    color:var(--texto);
-    background:var(--blanco);
-    line-height:1.6;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--blanco);
+    color: var(--texto);
+    line-height: 1.65;
 }
 
-a{
-    color:inherit;
+a {
+    color: inherit;
 }
 
 
-/* ================================
+/* =========================
    MENÚ
-================================ */
+========================= */
 
-nav{
-    min-height:72px;
-    padding:0 6%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+nav {
+    min-height: 76px;
+    padding: 0 7%;
 
-    background:rgba(255,255,255,.97);
-    border-bottom:1px solid #eeeeea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    position:sticky;
-    top:0;
-    z-index:100;
+    background: rgba(255,255,255,.97);
+    border-bottom: 1px solid #eeeeea;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
 }
 
-.brand-symbol{
-    color:var(--verde);
-    font-size:27px;
+.brand-leaf {
+    width: 28px;
+    height: 28px;
+
+    border: 2px solid var(--verde);
+    border-radius: 80% 10% 80% 10%;
+
+    transform: rotate(-25deg);
 }
 
-.brand-name{
-    font-family:Georgia,serif;
-    letter-spacing:4px;
-    font-size:18px;
+.brand-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    letter-spacing: 4px;
 }
 
-.brand-small{
-    display:block;
-    font-size:8px;
-    letter-spacing:3px;
-    color:var(--piedra);
-    margin-top:2px;
+.brand-subtitle {
+    display: block;
+    margin-top: 2px;
+
+    color: var(--piedra);
+    font-size: 8px;
+    letter-spacing: 3px;
 }
 
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:25px;
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
-.nav-links a{
-    text-decoration:none;
-    font-size:12px;
+.menu a {
+    text-decoration: none;
+    font-size: 12px;
 }
 
-.nav-links a:hover{
-    color:var(--verde);
+.menu a:hover {
+    color: var(--verde);
 }
 
-.nav-contact{
-    background:var(--verde);
-    color:white !important;
-    padding:11px 19px;
-    border-radius:6px;
+.menu .contact-button {
+    padding: 11px 20px;
+
+    background: var(--verde);
+    color: white;
+
+    border-radius: 5px;
+}
+
+.menu .contact-button:hover {
+    background: var(--verde-oscuro);
+    color: white;
 }
 
 
-/* ================================
+/* =========================
    PORTADA
-================================ */
+========================= */
 
-.hero{
-    min-height:570px;
-    display:grid;
-    grid-template-columns:45% 55%;
-    background:var(--blanco-calido);
+.hero {
+    min-height: 590px;
+
+    display: grid;
+    grid-template-columns: 43% 57%;
+
+    background: var(--blanco-calido);
 }
 
-.hero-text{
-    padding:70px 8% 60px 10%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+.hero-text {
+    padding: 75px 8% 65px 12%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.eyebrow{
-    font-size:10px;
-    letter-spacing:5px;
-    color:var(--texto-suave);
-    margin-bottom:20px;
+.eyebrow {
+    margin-bottom: 20px;
+
+    color: var(--texto-suave);
+
+    font-size: 10px;
+    letter-spacing: 5px;
 }
 
-.hero h1{
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:clamp(65px,7vw,96px);
-    font-weight:normal;
-    line-height:.87;
-    letter-spacing:-3px;
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(65px, 7vw, 96px);
+    font-weight: normal;
+
+    line-height: .88;
+    letter-spacing: -3px;
 }
 
-.hero-slogan{
-    display:flex;
-    gap:13px;
-    align-items:flex-start;
-    margin:22px 0 28px;
+.slogan {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    margin: 23px 0 27px;
 }
 
-.hero-line{
-    width:45px;
-    height:2px;
-    background:var(--verde);
-    margin-top:16px;
+.slogan-line {
+    width: 45px;
+    height: 2px;
+
+    margin-top: 17px;
+
+    background: var(--verde);
 }
 
-.hero-slogan p{
-    font-family:Georgia,serif;
-    font-style:italic;
-    font-size:27px;
-    line-height:1.25;
-    color:var(--verde-oscuro);
+.slogan p {
+    color: var(--verde-oscuro);
+
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-style: italic;
+
+    line-height: 1.25;
 }
 
-.hero-description{
-    max-width:520px;
-    font-size:14px;
-    color:#50534e;
+.hero-description {
+    max-width: 520px;
+
+    color: #50544e;
+    font-size: 14px;
 }
 
-.hero-buttons{
-    display:flex;
-    gap:13px;
-    margin-top:30px;
+.hero-buttons {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+
+    margin-top: 29px;
 }
 
-.btn{
-    display:inline-block;
-    padding:12px 22px;
-    border-radius:5px;
-    text-decoration:none;
-    font-size:12px;
-    transition:.2s;
+.button {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+    font-size: 12px;
+
+    transition: .2s;
 }
 
-.btn-primary{
-    background:var(--verde);
-    color:white;
+.button-green {
+    background: var(--verde);
+    color: white;
 }
 
-.btn-primary:hover{
-    background:var(--verde-oscuro);
+.button-green:hover {
+    background: var(--verde-oscuro);
+    transform: translateY(-2px);
 }
 
-.btn-secondary{
-    border:1px solid #aeb0aa;
-    background:white;
+.button-light {
+    background: white;
+
+    border: 1px solid #a9ada6;
 }
 
-.btn-secondary:hover{
-    background:var(--verde-suave);
+.button-light:hover {
+    background: var(--verde-suave);
 }
 
 
-/* ================================
-   IMAGEN PRINCIPAL
-================================ */
+/* =========================
+   IMAGEN DE PORTADA
+========================= */
 
-.hero-visual{
-    position:relative;
-    min-height:570px;
-    overflow:hidden;
+.hero-image {
+    position: relative;
+    min-height: 590px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #f4f3ed 0%,
-            #e9e8df 55%,
-            #d7d8d1 100%
-        );
+    overflow: hidden;
+
+    background-color: #e5e5df;
+
+    background-image: url("portada-valeria.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
 
 /*
-   Cuando subamos la imagen al repositorio
-   se llamará:
-
-   boceto-portada.png
+   Esta capa da un acabado más editorial
+   sin tapar la fotografía.
 */
 
-.hero-photo{
-    position:absolute;
-    inset:0;
+.hero-image::after {
+    content: "";
 
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(248,248,244,.10),
-            rgba(255,255,255,0)
-        ),
-        url("boceto-portada.png");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-}
-
-
-/* pequeño texto editorial */
-
-.visual-caption{
-    position:absolute;
-    right:5%;
-    bottom:5%;
-
-    color:white;
-    text-align:right;
-
-    font-size:9px;
-    letter-spacing:4px;
-    line-height:1.8;
-
-    text-shadow:0 1px 5px rgba(0,0,0,.35);
-}
-
-.visual-caption::before{
-    content:"";
-    display:block;
-    width:42px;
-    height:1px;
-    background:white;
-    margin:0 0 10px auto;
-}
-
-
-/* ================================
-   TÍTULOS DE SECCIONES
-================================ */
-
-section{
-    padding:70px 7%;
-}
-
-.section-title{
-    display:flex;
-    align-items:center;
-    gap:18px;
-    margin-bottom:25px;
-}
-
-.section-title h2{
-    font-family:Georgia,serif;
-    font-size:35px;
-    font-weight:normal;
-}
-
-.section-title span{
-    display:block;
-    width:48px;
-    height:2px;
-    background:var(--verde);
-}
-
-
-/* ================================
-   SOBRE MÍ
-================================ */
-
-.about{
-    padding:0;
-    display:grid;
-    grid-template-columns:37% 63%;
-    background:white;
-}
-
-.about-image{
-    min-height:390px;
-    position:relative;
-    overflow:hidden;
+    position: absolute;
+    inset: 0;
 
     background:
         linear-gradient(
-            135deg,
-            #dadbd4,
-            #a7aaa1
+            90deg,
+            rgba(252,252,249,.12) 0%,
+            rgba(255,255,255,0) 30%
         );
+
+    pointer-events: none;
+}
+
+.image-caption {
+    position: absolute;
+
+    right: 5%;
+    bottom: 5%;
+
+    z-index: 2;
+
+    color: white;
+
+    text-align: right;
+    font-size: 9px;
+    letter-spacing: 4px;
+    line-height: 1.8;
+
+    text-shadow: 0 1px 6px rgba(0,0,0,.25);
 }
 
 
-/* efecto de tela */
+/* =========================
+   GENERAL
+========================= */
 
-.about-image::before{
-    content:"";
-    position:absolute;
-    inset:0;
+section {
+    padding: 72px 7%;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 24px;
+}
+
+.section-title h2 {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    font-weight: normal;
+}
+
+.section-title span {
+    width: 48px;
+    height: 2px;
+
+    background: var(--verde);
+}
+
+
+/* =========================
+   SOBRE MÍ
+========================= */
+
+.about {
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 37% 63%;
+}
+
+.about-visual {
+    min-height: 390px;
+
+    position: relative;
+    overflow: hidden;
 
     background:
         repeating-linear-gradient(
             45deg,
             rgba(255,255,255,.12) 0,
             rgba(255,255,255,.12) 2px,
-            rgba(40,45,38,.04) 3px,
+            rgba(50,50,45,.04) 3px,
             rgba(255,255,255,.08) 7px
+        ),
+        linear-gradient(
+            135deg,
+            #deddd6,
+            #aaa99e
         );
 }
 
 
-/* hoja natural discreta */
+/* Una sola hoja sutil */
 
-.about-leaf{
-    position:absolute;
-    width:150px;
-    height:75px;
+.about-leaf {
+    position: absolute;
 
-    background:#718f46;
+    width: 160px;
+    height: 78px;
 
-    border-radius:
-        90% 10%
-        90% 10%;
+    left: 5%;
+    top: 7%;
 
-    left:7%;
-    top:9%;
+    background: var(--verde);
 
-    transform:rotate(-30deg);
-    opacity:.88;
+    border-radius: 90% 10% 90% 10%;
+
+    transform: rotate(-30deg);
+
+    opacity: .85;
 }
 
 
-/* etiqueta de tela */
+/* Etiqueta inspirada en textil */
 
-.fabric-label{
-    position:absolute;
-    width:215px;
-    padding:29px 20px;
+.textile-label {
+    width: 220px;
 
-    left:50%;
-    top:50%;
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
 
     transform:
-        translate(-50%,-50%)
+        translate(-50%, -50%)
         rotate(4deg);
 
-    background:#f0ede4;
+    padding: 30px 20px;
 
-    border:
-        1px solid
-        #bbbcb5;
+    background: #efede5;
+
+    border: 1px solid #bbbcb4;
 
     box-shadow:
-        0 13px 30px
+        0 12px 28px
         rgba(45,48,42,.16);
 
-    text-align:center;
+    text-align: center;
 
-    font-size:10px;
-    letter-spacing:2.5px;
+    font-size: 10px;
+    letter-spacing: 2.5px;
 }
 
-.fabric-label-symbol{
-    color:var(--verde);
-    font-size:27px;
-    margin-bottom:10px;
+.label-mark {
+    margin-bottom: 8px;
+
+    color: var(--verde);
+
+    font-family: Georgia, serif;
+    font-size: 27px;
 }
 
-.about-content{
-    padding:60px 8%;
+.about-content {
+    padding: 60px 8%;
 }
 
-.about-content > p{
-    max-width:700px;
-    color:#575b55;
-    font-size:14px;
-}
+.about-content > p {
+    max-width: 720px;
 
-
-/* valores */
-
-.values{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-    margin-top:38px;
-}
-
-.value{
-    text-align:center;
-    text-transform:uppercase;
-
-    font-size:9px;
-    letter-spacing:1.5px;
-
-    color:#62655f;
-}
-
-.value-icon{
-    display:block;
-    font-size:28px;
-    color:var(--verde);
-    margin-bottom:8px;
+    color: #565a54;
+    font-size: 14px;
 }
 
 
-/* ================================
+/* Valores */
+
+.values {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+
+    margin-top: 38px;
+}
+
+.value {
+    text-align: center;
+
+    color: #60645e;
+
+    font-size: 9px;
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+.value-icon {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--verde);
+
+    font-size: 28px;
+}
+
+
+/* =========================
    HABILIDADES
-================================ */
+========================= */
 
-.skills-section{
-    background:#fafaf7;
+.skills-section {
+    background: var(--blanco-calido);
 }
 
-.skills-label{
-    margin:20px 0 10px;
+.skill-heading {
+    margin: 19px 0 10px;
 
-    font-size:9px;
-    letter-spacing:3px;
+    color: #666a63;
 
-    color:#666963;
+    font-size: 9px;
+    letter-spacing: 3px;
 }
 
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:9px;
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
 }
 
-.skill{
-    background:var(--piedra-claro);
-    border-radius:20px;
+.skill {
+    padding: 7px 14px;
 
-    padding:7px 14px;
+    background: var(--piedra-claro);
 
-    font-size:11px;
-    color:#555852;
+    border-radius: 20px;
+
+    color: #555951;
+
+    font-size: 11px;
 }
 
-.skill:hover{
-    background:var(--verde-suave);
+.skill:hover {
+    background: var(--verde-suave);
 }
 
 
-/* ================================
+/* =========================
    PROYECTOS
-================================ */
+========================= */
 
-.projects-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
-.project{
-    overflow:hidden;
+.project {
+    overflow: hidden;
 
-    background:white;
+    background: white;
 
-    border:
-        1px solid
-        var(--linea);
+    border: 1px solid var(--borde);
+    border-radius: 6px;
 
-    border-radius:7px;
-
-    transition:.25s;
+    transition: .25s;
 }
 
-.project:hover{
-    transform:translateY(-5px);
+.project:hover {
+    transform: translateY(-5px);
 
     box-shadow:
         0 15px 32px
         rgba(50,55,45,.10);
 }
 
-.project-visual{
-    height:190px;
-    position:relative;
-    overflow:hidden;
+.project-image {
+    height: 185px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
 }
 
 
 /* ALKE WALLET */
 
-.wallet{
+.wallet {
     background:
         linear-gradient(
-            130deg,
-            #e7e9e3,
-            #f6f5f0
+            135deg,
+            #e2e6dd,
+            #f5f4ef
         );
 }
 
-.wallet::before{
-    content:"DATABASE";
+.wallet::before {
+    content: "DATABASE";
 
-    position:absolute;
+    padding: 27px 35px;
 
-    left:21%;
-    top:37%;
+    background: #29302c;
+    color: #b6d48b;
 
-    padding:27px 35px;
-
-    background:#2b302c;
-    color:#b8d98a;
-
-    font-family:monospace;
+    font-family: monospace;
 
     box-shadow:
-        0 10px 25px
-        rgba(0,0,0,.18);
+        0 9px 22px
+        rgba(0,0,0,.16);
 }
 
 
-/* SMART TASK */
+/* SMARTTASK */
 
-.smart{
+.smarttask {
     background:
         linear-gradient(
             120deg,
-            #deded7 0 50%,
-            #f7f7f3 50%
+            #deddd4 0 50%,
+            #f7f6f1 50%
         );
 }
 
-.smart::before{
+.smarttask::before {
     content:
-        "Plan\A Organiza\A Ejecuta\A Logra";
+        "Plan   ✓\A Organiza   ✓\A Ejecuta   ✓\A Logra   ✓";
 
-    white-space:pre;
+    white-space: pre;
 
-    position:absolute;
+    color: #51554f;
 
-    left:34%;
-    top:19%;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
 
-    font-family:Georgia,serif;
-    font-style:italic;
-
-    font-size:19px;
-    line-height:1.5;
-
-    color:#535650;
+    line-height: 1.8;
 }
 
 
 /* SPRING */
 
-.spring{
-    background:#272d2b;
+.spring {
+    background: #262d2a;
 }
 
-.spring::before{
+.spring::before {
     content:
         "public class SpringEduManager {\A   @Controller\A   @Service\A   @Repository\A }";
 
-    white-space:pre;
+    white-space: pre;
 
-    position:absolute;
+    color: #add17d;
 
-    left:9%;
-    top:17%;
+    font-family: monospace;
+    font-size: 12px;
 
-    color:#add27c;
-
-    font-family:monospace;
-    font-size:12px;
-    line-height:1.9;
+    line-height: 1.8;
 }
 
 
-.project-content{
-    padding:22px;
+.project-content {
+    padding: 22px;
 }
 
-.project h3{
-    font-family:Georgia,serif;
-    font-weight:normal;
-    font-size:22px;
+.project-content h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
 }
 
-.project p{
-    min-height:78px;
+.project-content p {
+    min-height: 78px;
 
-    margin-top:7px;
+    margin-top: 7px;
 
-    color:#62655f;
-    font-size:12px;
+    color: #62665f;
+
+    font-size: 12px;
 }
 
-.tags{
-    margin:14px 0;
+.tags {
+    margin: 14px 0;
 }
 
-.tag{
-    display:inline-block;
+.tag {
+    display: inline-block;
 
-    margin:2px;
+    margin: 2px;
+    padding: 5px 9px;
 
-    padding:5px 9px;
+    background: var(--piedra-claro);
 
-    background:
-        var(--piedra-claro);
+    border-radius: 14px;
 
-    border-radius:15px;
-
-    font-size:9px;
+    font-size: 9px;
 }
 
-.project-link{
-    color:var(--verde-oscuro);
+.project-link {
+    color: var(--verde-oscuro);
 
-    font-size:11px;
+    text-decoration: none;
 
-    text-decoration:none;
+    font-size: 11px;
 
     border-bottom:
         1px solid
@@ -668,221 +676,235 @@ section{
 }
 
 
-/* ================================
+/* =========================
    CASO DE ESTUDIO
-================================ */
+========================= */
 
-.case-study{
-    background:var(--verde-suave);
+.case-study {
+    background: var(--verde-suave);
 }
 
-.case-intro{
-    max-width:750px;
-    font-size:14px;
-    color:#565a53;
+.case-intro {
+    max-width: 780px;
+
+    color: #575b55;
+
+    font-size: 14px;
 }
 
-.case-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    margin-top:30px;
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    margin-top: 30px;
 }
 
-.case-card{
+.case-card {
+    padding: 27px;
+
     background:
-        rgba(255,255,255,.88);
-
-    padding:27px;
+        rgba(255,255,255,.87);
 
     border-left:
         3px solid
         var(--verde);
 }
 
-.case-card h3{
-    font-family:Georgia,serif;
-    font-weight:normal;
-    margin-bottom:10px;
+.case-number {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--verde);
+
+    font-size: 10px;
+    letter-spacing: 2px;
 }
 
-.case-card p{
-    color:#61645f;
-    font-size:12px;
+.case-card h3 {
+    margin-bottom: 8px;
+
+    font-family: Georgia, serif;
+    font-weight: normal;
+}
+
+.case-card p {
+    color: #60645e;
+
+    font-size: 12px;
 }
 
 
-/* ================================
+/* =========================
    FORMACIÓN
-================================ */
+========================= */
 
-.timeline{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
+.education {
+    background: white;
+}
 
-    margin-top:35px;
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    margin-top: 35px;
 
     border-top:
         1px solid
         #bfc1ba;
 }
 
-.timeline-item{
-    padding:22px 15px;
+.timeline-item {
+    position: relative;
 
-    position:relative;
+    padding: 22px 15px;
 
-    color:#60635e;
-    font-size:11px;
+    color: #62665f;
+
+    font-size: 11px;
 }
 
-.timeline-item::before{
-    content:"";
+.timeline-item::before {
+    content: "";
 
-    width:8px;
-    height:8px;
+    width: 8px;
+    height: 8px;
 
-    position:absolute;
+    position: absolute;
 
-    left:0;
-    top:-4px;
+    left: 0;
+    top: -4px;
 
-    border-radius:50%;
+    background: var(--verde);
 
-    background:var(--verde);
+    border-radius: 50%;
 }
 
-.timeline-item strong{
-    display:block;
-    color:#343733;
-    margin-top:4px;
+.timeline-item strong {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #343733;
 }
 
 
-/* ================================
+/* =========================
    CONTACTO
-================================ */
+========================= */
 
-.contact{
-    background:#fafaf7;
+.contact {
+    background: var(--blanco-calido);
 }
 
-.contact-grid{
-    display:grid;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 45px;
 
-    grid-template-columns:
-        1fr 1fr 1fr;
-
-    gap:45px;
-
-    align-items:center;
+    align-items: center;
 }
 
-.contact-signature{
-    font-family:Georgia,serif;
+.signature {
+    color: var(--verde-oscuro);
 
-    font-style:italic;
-    font-size:20px;
-
-    color:var(--verde-oscuro);
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
 }
 
-.contact h2{
-    font-family:Georgia,serif;
-
-    font-weight:normal;
-    font-size:29px;
+.contact h2 {
+    font-family: Georgia, serif;
+    font-size: 29px;
+    font-weight: normal;
 }
 
 .contact p,
-.contact a{
-    color:#60635e;
+.contact a {
+    color: #60645e;
 
-    font-size:12px;
+    font-size: 12px;
 
-    text-decoration:none;
+    text-decoration: none;
 }
 
-.contact-quote{
-    font-family:Georgia,serif !important;
+.contact a:hover {
+    color: var(--verde);
+}
 
-    font-style:italic;
+.quote {
+    color: #40443f !important;
 
-    font-size:18px !important;
-
-    color:#40433f !important;
+    font-family: Georgia, serif;
+    font-size: 18px !important;
+    font-style: italic;
 }
 
 
-/* ================================
+/* =========================
    FOOTER
-================================ */
+========================= */
 
-footer{
-    padding:23px;
+footer {
+    padding: 23px;
 
-    text-align:center;
+    background: #eeeeea;
 
-    background:#ededE9;
+    color: #747870;
 
-    color:#747771;
+    text-align: center;
 
-    font-size:9px;
-
-    letter-spacing:1px;
+    font-size: 9px;
+    letter-spacing: 1px;
 }
 
 
-/* ================================
+/* =========================
    CELULAR
-================================ */
+========================= */
 
-@media(max-width:850px){
+@media(max-width: 850px) {
 
-    nav{
-        padding:0 5%;
+    .menu {
+        display: none;
     }
 
-    .nav-links{
-        display:none;
+    .hero {
+        grid-template-columns: 1fr;
     }
 
-    .hero{
-        grid-template-columns:1fr;
+    .hero-text {
+        padding: 55px 8%;
     }
 
-    .hero-text{
-        padding:55px 8%;
+    .hero-image {
+        min-height: 500px;
+        background-position: center;
     }
 
-    .hero-visual{
-        min-height:480px;
+    .about {
+        grid-template-columns: 1fr;
     }
 
-    .about{
-        grid-template-columns:1fr;
+    .projects,
+    .case-grid {
+        grid-template-columns: 1fr;
     }
 
-    .projects-grid,
-    .case-grid{
-        grid-template-columns:1fr;
+    .values {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .values{
-        grid-template-columns:repeat(2,1fr);
+    .timeline {
+        grid-template-columns: 1fr;
+
+        border-top: none;
+        border-left: 1px solid #bfc1ba;
     }
 
-    .timeline{
-        grid-template-columns:1fr;
-
-        border-top:none;
-        border-left:
-            1px solid
-            #bfc1ba;
-    }
-
-    .contact-grid{
-        grid-template-columns:1fr;
+    .contact-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -893,60 +915,32 @@ footer{
 <body>
 
 
-<!-- ============================
-     NAVEGACIÓN
-============================ -->
+<!-- MENÚ -->
 
 <nav>
 
 <div class="brand">
 
-<div class="brand-symbol">♧</div>
+<div class="brand-leaf"></div>
 
 <div>
-
-<div class="brand-name">
-VALERIA IBARRA
-</div>
-
-<span class="brand-small">
-DISEÑO + TECNOLOGÍA
-</span>
-
+<div class="brand-name">VALERIA IBARRA</div>
+<span class="brand-subtitle">DISEÑO + TECNOLOGÍA</span>
 </div>
 
 </div>
 
 
-<div class="nav-links">
+<div class="menu">
 
-<a href="#inicio">
-Inicio
-</a>
+<a href="#inicio">Inicio</a>
+<a href="#sobre-mi">Sobre mí</a>
+<a href="#habilidades">Habilidades</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#formacion">Formación</a>
+<a href="#contacto">Contacto</a>
 
-<a href="#sobre-mi">
-Sobre mí
-</a>
-
-<a href="#habilidades">
-Habilidades
-</a>
-
-<a href="#proyectos">
-Proyectos
-</a>
-
-<a href="#formacion">
-Formación
-</a>
-
-<a href="#contacto">
-Contacto
-</a>
-
-<a
-href="#contacto"
-class="nav-contact">
+<a href="#contacto" class="contact-button">
 Conectemos →
 </a>
 
@@ -955,13 +949,10 @@ Conectemos →
 </nav>
 
 
-<!-- ============================
-     PORTADA
-============================ -->
 
-<header
-class="hero"
-id="inicio">
+<!-- PORTADA -->
+
+<header class="hero" id="inicio">
 
 
 <div class="hero-text">
@@ -977,9 +968,9 @@ Ibarra
 </h1>
 
 
-<div class="hero-slogan">
+<div class="slogan">
 
-<div class="hero-line"></div>
+<div class="slogan-line"></div>
 
 <p>
 Diseño ideas.<br>
@@ -991,34 +982,24 @@ Desarrollo soluciones.
 
 <p class="hero-description">
 
-Diseñadora de Vestuario con más de 10 años
-de experiencia en desarrollo de productos
-textiles, formación técnica y emprendimiento.
-
-Actualmente en formación Full Stack Java,
-uniendo creatividad, diseño y tecnología
-para crear soluciones con sentido.
+Diseñadora de Vestuario con más de 10 años de experiencia en
+desarrollo de productos textiles, formación técnica y emprendimiento.
+Actualmente en formación Full Stack Java, uniendo creatividad,
+diseño y tecnología para crear soluciones con sentido.
 
 </p>
 
 
 <div class="hero-buttons">
 
-<a
-href="#proyectos"
-class="btn btn-primary">
-
+<a href="#proyectos"
+class="button button-green">
 Ver mis proyectos →
-
 </a>
 
-
-<a
-href="#sobre-mi"
-class="btn btn-secondary">
-
+<a href="#sobre-mi"
+class="button button-light">
 Conoce más
-
 </a>
 
 </div>
@@ -1026,43 +1007,35 @@ Conoce más
 </div>
 
 
-<!-- FOTO / BOCETO -->
+<!-- AQUÍ APARECE LA IMAGEN REAL ELEGIDA -->
 
-<div class="hero-visual">
+<div class="hero-image">
 
-<div class="hero-photo"></div>
-
-<div class="visual-caption">
-
+<div class="image-caption">
 DISEÑO<br>
 TECNOLOGÍA<br>
 SUSTENTABILIDAD
-
 </div>
 
 </div>
+
 
 </header>
 
 
-<!-- ============================
-     SOBRE MÍ
-============================ -->
 
-<section
-class="about"
-id="sobre-mi">
+<!-- SOBRE MÍ -->
+
+<section class="about" id="sobre-mi">
 
 
-<div class="about-image">
+<div class="about-visual">
 
 <div class="about-leaf"></div>
 
-<div class="fabric-label">
+<div class="textile-label">
 
-<div class="fabric-label-symbol">
-♧
-</div>
+<div class="label-mark">◇</div>
 
 IDEAS<br>
 PERSONAS<br>
@@ -1082,9 +1055,7 @@ UN FUTURO MEJOR
 
 <div class="section-title">
 
-<h2>
-Sobre mí
-</h2>
+<h2>Sobre mí</h2>
 
 <span></span>
 
@@ -1093,16 +1064,13 @@ Sobre mí
 
 <p>
 
-Creo en el poder del diseño y la tecnología
-para generar un impacto positivo.
+Creo en el poder del diseño y la tecnología para generar un impacto
+positivo. Mi experiencia en vestuario me ha enseñado a observar
+necesidades, resolver problemas y transformar ideas en productos
+concretos.
 
-Mi experiencia en vestuario me ha enseñado
-a observar necesidades, resolver problemas
-y transformar ideas en productos concretos.
-
-Hoy aplico esa misma mirada en el desarrollo
-de soluciones digitales, integrando creatividad,
-experiencia de usuario y tecnología.
+Hoy aplico esa misma mirada al desarrollo de soluciones digitales,
+integrando creatividad, experiencia de usuario y tecnología.
 
 </p>
 
@@ -1112,9 +1080,7 @@ experiencia de usuario y tecnología.
 
 <div class="value">
 
-<span class="value-icon">
-♧
-</span>
+<span class="value-icon">◇</span>
 
 Creatividad<br>
 con propósito
@@ -1124,9 +1090,7 @@ con propósito
 
 <div class="value">
 
-<span class="value-icon">
-⌨
-</span>
+<span class="value-icon">⌨</span>
 
 Aprendizaje<br>
 continuo
@@ -1136,9 +1100,7 @@ continuo
 
 <div class="value">
 
-<span class="value-icon">
-◎
-</span>
+<span class="value-icon">◎</span>
 
 Trabajo<br>
 colaborativo
@@ -1148,9 +1110,7 @@ colaborativo
 
 <div class="value">
 
-<span class="value-icon">
-◉
-</span>
+<span class="value-icon">◉</span>
 
 Soluciones<br>
 del mundo real
@@ -1165,9 +1125,8 @@ del mundo real
 </section>
 
 
-<!-- ============================
-     HABILIDADES
-============================ -->
+
+<!-- HABILIDADES -->
 
 <section
 class="skills-section"
@@ -1176,16 +1135,14 @@ id="habilidades">
 
 <div class="section-title">
 
-<h2>
-Habilidades
-</h2>
+<h2>Habilidades</h2>
 
 <span></span>
 
 </div>
 
 
-<p class="skills-label">
+<p class="skill-heading">
 HERRAMIENTAS TÉCNICAS
 </p>
 
@@ -1205,79 +1162,53 @@ HERRAMIENTAS TÉCNICAS
 </div>
 
 
-<p class="skills-label">
+<p class="skill-heading">
 DISEÑO + COMPETENCIAS
 </p>
 
 
 <div class="skills">
 
-<span class="skill">
-Diseño de productos
-</span>
-
-<span class="skill">
-Experiencia de usuario
-</span>
-
-<span class="skill">
-Gestión de proyectos
-</span>
-
-<span class="skill">
-Resolución de problemas
-</span>
-
-<span class="skill">
-Comunicación
-</span>
-
-<span class="skill">
-Adaptabilidad
-</span>
-
-<span class="skill">
-Creatividad
-</span>
+<span class="skill">Diseño de productos</span>
+<span class="skill">Experiencia de usuario</span>
+<span class="skill">Gestión de proyectos</span>
+<span class="skill">Resolución de problemas</span>
+<span class="skill">Comunicación</span>
+<span class="skill">Adaptabilidad</span>
+<span class="skill">Creatividad</span>
 
 </div>
 
 </section>
 
 
-<!-- ============================
-     PROYECTOS
-============================ -->
+
+<!-- PROYECTOS -->
 
 <section id="proyectos">
 
 
 <div class="section-title">
 
-<h2>
-Proyectos
-</h2>
+<h2>Proyectos</h2>
 
 <span></span>
 
 </div>
 
 
-<div class="projects-grid">
+<div class="projects">
 
 
-<!-- ALKE WALLET -->
+<!-- ALKE -->
 
 <article class="project">
 
-<div class="project-visual wallet">
-</div>
+<div class="project-image wallet"></div>
 
 <div class="project-content">
 
-<h3>
-Alke Wallet
-</h3>
+<h3>Alke Wallet</h3>
 
 <p>
 
@@ -1290,20 +1221,11 @@ entidad-relación.
 
 <div class="tags">
 
-<span class="tag">
-MySQL
-</span>
-
-<span class="tag">
-SQL
-</span>
-
-<span class="tag">
-Modelo ER
-</span>
+<span class="tag">MySQL</span>
+<span class="tag">SQL</span>
+<span class="tag">Modelo ER</span>
 
 </div>
-
 
 <a
 class="project-link"
@@ -1320,18 +1242,15 @@ Ver proyecto en GitHub →
 
 
 
-<!-- SMART TASK -->
+<!-- SMARTTASK -->
 
 <article class="project">
 
-<div class="project-visual smart">
-</div>
+<div class="project-image smarttask"></div>
 
 <div class="project-content">
 
-<h3>
-SmartTask
-</h3>
+<h3>SmartTask</h3>
 
 <p>
 
@@ -1342,23 +1261,13 @@ de responsabilidades.
 
 </p>
 
-
 <div class="tags">
 
-<span class="tag">
-Java
-</span>
-
-<span class="tag">
-POO
-</span>
-
-<span class="tag">
-Eclipse
-</span>
+<span class="tag">Java</span>
+<span class="tag">POO</span>
+<span class="tag">Eclipse</span>
 
 </div>
-
 
 <a
 class="project-link"
@@ -1379,44 +1288,29 @@ Ver proyecto en GitHub →
 
 <article class="project">
 
-<div class="project-visual spring">
-</div>
+<div class="project-image spring"></div>
 
 <div class="project-content">
 
-<h3>
-SpringEduManager
-</h3>
+<h3>SpringEduManager</h3>
 
 <p>
 
 Sistema de gestión de alumnos desarrollado
-con Java y Spring Boot, integrando MVC,
-persistencia, seguridad y servicios API REST.
+con Java y Spring Boot, integrando
+arquitectura MVC, persistencia, seguridad
+y servicios API REST.
 
 </p>
 
-
 <div class="tags">
 
-<span class="tag">
-Java
-</span>
-
-<span class="tag">
-Spring Boot
-</span>
-
-<span class="tag">
-MySQL
-</span>
-
-<span class="tag">
-API REST
-</span>
+<span class="tag">Java</span>
+<span class="tag">Spring Boot</span>
+<span class="tag">MySQL</span>
+<span class="tag">API REST</span>
 
 </div>
-
 
 <a
 class="project-link"
@@ -1437,9 +1331,8 @@ Ver proyecto en GitHub →
 </section>
 
 
-<!-- ============================
-     CASO DE ESTUDIO
-============================ -->
+
+<!-- CASO DE ESTUDIO -->
 
 <section class="case-study">
 
@@ -1458,8 +1351,8 @@ Caso de estudio · SpringEduManager
 <p class="case-intro">
 
 Uno de los proyectos que mejor representa
-mi evolución durante la formación
-en Desarrollo Full Stack Java.
+mi evolución durante la formación en
+Desarrollo Full Stack Java.
 
 </p>
 
@@ -1469,16 +1362,17 @@ en Desarrollo Full Stack Java.
 
 <div class="case-card">
 
-<h3>
-01 · El desafío
-</h3>
+<span class="case-number">01</span>
+
+<h3>El desafío</h3>
 
 <p>
 
-Pasar desde ejercicios individuales de
-programación hacia una aplicación web
-estructurada y comprender cómo interactúan
-los distintos componentes de Spring Boot.
+Pasar desde ejercicios individuales
+de programación hacia una aplicación
+web estructurada, comprendiendo cómo
+interactúan los distintos componentes
+de Spring Boot.
 
 </p>
 
@@ -1487,9 +1381,9 @@ los distintos componentes de Spring Boot.
 
 <div class="case-card">
 
-<h3>
-02 · La solución
-</h3>
+<span class="case-number">02</span>
+
+<h3>La solución</h3>
 
 <p>
 
@@ -1505,16 +1399,16 @@ etapas del proyecto.
 
 <div class="case-card">
 
-<h3>
-03 · El aprendizaje
-</h3>
+<span class="case-number">03</span>
+
+<h3>El aprendizaje</h3>
 
 <p>
 
 Profundicé en arquitectura MVC,
 persistencia de datos, controladores REST
 y seguridad mediante roles, integrando
-diferentes conocimientos en una sola
+distintos conocimientos en una sola
 aplicación.
 
 </p>
@@ -1527,18 +1421,17 @@ aplicación.
 </section>
 
 
-<!-- ============================
-     FORMACIÓN
-============================ -->
 
-<section id="formacion">
+<!-- FORMACIÓN -->
+
+<section
+class="education"
+id="formacion">
 
 
 <div class="section-title">
 
-<h2>
-Formación
-</h2>
+<h2>Formación</h2>
 
 <span></span>
 
@@ -1569,7 +1462,7 @@ Talento Digital para Chile
 UX: Empatizar, Definir e Idear
 </strong>
 
-Formación en experiencia de usuario
+Experiencia de usuario
 
 </div>
 
@@ -1603,14 +1496,14 @@ Mención Alta Costura
 
 <div class="timeline-item">
 
-Complementario
+Experiencia
 
 <strong>
 Diseño + Emprendimiento
 </strong>
 
-Experiencia en proyectos textiles,
-formación y desarrollo de productos.
+Desarrollo de productos textiles,
+formación y proyectos creativos.
 
 </div>
 
@@ -1620,9 +1513,8 @@ formación y desarrollo de productos.
 </section>
 
 
-<!-- ============================
-     CONTACTO
-============================ -->
+
+<!-- CONTACTO -->
 
 <section
 class="contact"
@@ -1632,12 +1524,9 @@ id="contacto">
 <div class="contact-grid">
 
 
-<div class="contact-signature">
+<div class="signature">
 
-♧ &nbsp;
 Ropa con historia.<br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Tecnología con propósito.
 
 </div>
@@ -1645,14 +1534,15 @@ Tecnología con propósito.
 
 <div>
 
-<h2>
-Conectemos
-</h2>
+<h2>Conectemos</h2>
 
 <p>
 Santiago, Chile
 </p>
 
+<p>
+valeriaibarrabaeza@gmail.com
+</p>
 
 <p>
 
@@ -1671,7 +1561,7 @@ GitHub · valeriaib-stack
 
 <div>
 
-<p class="contact-quote">
+<p class="quote">
 
 “Un futuro más creativo,<br>
 tecnológico y sostenible<br>
@@ -1685,6 +1575,7 @@ es posible.”
 </div>
 
 </section>
+
 
 
 <footer>
