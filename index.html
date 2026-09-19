@@ -7,116 +7,101 @@
 <title>Valeria Ibarra | Diseño + Tecnología</title>
 
 <style>
-
-/* =========================
-   PALETA
-========================= */
-
-:root {
-    --blanco: #ffffff;
-    --blanco-calido: #fbfbf8;
-    --piedra: #f1f1ed;
-    --piedra-medio: #deded7;
-    --gris: #666861;
-    --grafito: #272a27;
-
-    /* Verde inspirado en las hojas de tu fotografía */
-    --verde: #56851f;
-    --verde-vivo: #639528;
-    --verde-oscuro: #365a24;
-    --verde-suave: #edf3e8;
+:root{
+    --verde:#5f852d;
+    --verde-oscuro:#456522;
+    --verde-claro:#eef2e8;
+    --piedra:#73756f;
+    --piedra-claro:#f1f1ed;
+    --blanco:#ffffff;
+    --blanco-calido:#fcfcf9;
+    --texto:#292b28;
+    --linea:#dedfd9;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--blanco);
-    color: var(--grafito);
-    line-height: 1.65;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--texto);
+    background:var(--blanco);
+    line-height:1.6;
 }
 
-a {
-    color: inherit;
+a{
+    color:inherit;
 }
-
 
 /* =========================
    NAVEGACIÓN
 ========================= */
 
-nav {
-    height: 78px;
-    padding: 0 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: rgba(255,255,255,.97);
-    border-bottom: 1px solid #eeeeea;
-
-    position: sticky;
-    top: 0;
-    z-index: 100;
+nav{
+    height:72px;
+    padding:0 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,.97);
+    border-bottom:1px solid #eeeeea;
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 13px;
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.leaf-logo {
-    font-size: 30px;
-    color: var(--verde);
+.brand-leaf{
+    font-size:29px;
+    color:var(--verde);
 }
 
-.brand-name {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 18px;
-    letter-spacing: 4px;
+.brand-name{
+    font-family:Georgia,serif;
+    letter-spacing:4px;
+    font-size:18px;
 }
 
-.brand-small {
-    display: block;
-    font-size: 9px;
-    letter-spacing: 3px;
-    color: var(--gris);
-    margin-top: 3px;
+.brand-small{
+    display:block;
+    font-size:8px;
+    letter-spacing:3px;
+    color:var(--piedra);
+    margin-top:2px;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 25px;
+.nav-links{
+    display:flex;
+    gap:26px;
+    align-items:center;
 }
 
-.nav-links a {
-    text-decoration: none;
-    font-size: 13px;
+.nav-links a{
+    text-decoration:none;
+    font-size:12px;
 }
 
-.nav-links a:hover {
-    color: var(--verde);
+.nav-links a:hover{
+    color:var(--verde);
 }
 
-.nav-button {
-    background: var(--verde);
-    color: white !important;
-    padding: 10px 17px;
-    border-radius: 6px;
-}
-
-.nav-button:hover {
-    background: var(--verde-oscuro);
+.nav-contact{
+    background:var(--verde);
+    color:white !important;
+    padding:11px 20px;
+    border-radius:7px;
 }
 
 
@@ -124,257 +109,444 @@ nav {
    PORTADA
 ========================= */
 
-.hero {
-    min-height: 600px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.hero{
+    display:grid;
+    grid-template-columns:42% 58%;
+    min-height:555px;
+    background:var(--blanco-calido);
 }
 
-.hero-text {
-    padding: 85px 9%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: var(--blanco-calido);
+.hero-info{
+    padding:65px 7% 55px 10%;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
 }
 
-.eyebrow {
-    font-size: 11px;
-    letter-spacing: 5px;
-    color: var(--gris);
-    margin-bottom: 20px;
+.eyebrow{
+    font-size:10px;
+    letter-spacing:5px;
+    color:#5e625c;
+    margin-bottom:17px;
 }
 
-.hero h1 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: normal;
-    font-size: clamp(62px, 7vw, 92px);
-    line-height: .87;
-    margin-bottom: 24px;
+.hero h1{
+    font-family:Georgia, "Times New Roman", serif;
+    font-size:clamp(60px,6.5vw,92px);
+    font-weight:normal;
+    line-height:.88;
+    letter-spacing:-3px;
 }
 
-.hero-message {
-    font-family: Georgia, "Times New Roman", serif;
-    font-style: italic;
-    color: var(--verde-oscuro);
-    font-size: 27px;
-    line-height: 1.25;
-    margin: 0 0 27px 55px;
+.hero-slogan{
+    display:flex;
+    align-items:flex-start;
+    gap:13px;
+    margin:21px 0 27px;
 }
 
-.green-line {
-    width: 45px;
-    height: 2px;
-    background: var(--verde);
-    margin-bottom: -19px;
+.hero-line{
+    width:44px;
+    height:2px;
+    background:var(--verde);
+    margin-top:16px;
 }
 
-.hero-description {
-    max-width: 560px;
-    font-size: 15px;
-    color: #454842;
+.hero-slogan p{
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-size:26px;
+    line-height:1.25;
+    color:var(--verde-oscuro);
 }
 
-.buttons {
-    margin-top: 29px;
-    display: flex;
-    gap: 13px;
-    flex-wrap: wrap;
+.hero-description{
+    max-width:510px;
+    color:#4f524e;
+    font-size:14px;
 }
 
-.button {
-    display: inline-block;
-    text-decoration: none;
-    background: var(--verde);
-    color: white;
-    padding: 12px 23px;
-    border-radius: 5px;
-    font-size: 13px;
-    transition: .2s;
+.hero-buttons{
+    display:flex;
+    gap:14px;
+    margin-top:28px;
 }
 
-.button:hover {
-    background: var(--verde-oscuro);
-    transform: translateY(-2px);
+.btn{
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:6px;
+    font-size:12px;
+    transition:.2s;
 }
 
-.button-outline {
-    background: white;
-    color: var(--grafito);
-    border: 1px solid #a7aaa2;
+.btn-primary{
+    background:var(--verde);
+    color:white;
 }
 
-.button-outline:hover {
-    background: var(--verde-suave);
-    color: var(--verde-oscuro);
+.btn-primary:hover{
+    background:var(--verde-oscuro);
 }
 
-
-/* Imagen conceptual construida con CSS */
-
-.hero-visual {
-    position: relative;
-    overflow: hidden;
-    background:
-        radial-gradient(circle at 20% 20%, rgba(99,149,40,.23), transparent 25%),
-        radial-gradient(circle at 80% 30%, rgba(54,90,36,.16), transparent 24%),
-        linear-gradient(135deg, #f4f3ed 0%, #deddd5 100%);
+.btn-secondary{
+    background:white;
+    border:1px solid #a9aaa5;
 }
 
-.hero-visual::before {
-    content: "❧";
-    position: absolute;
-    font-family: Georgia, serif;
-    font-size: 380px;
-    color: rgba(86,133,31,.22);
-    transform: rotate(-28deg);
-    left: -15px;
-    top: -80px;
-}
-
-.sketch-card {
-    position: absolute;
-    width: 52%;
-    min-height: 350px;
-    background: rgba(255,255,255,.89);
-    right: 9%;
-    top: 16%;
-    padding: 45px 30px;
-    transform: rotate(3deg);
-    box-shadow: 0 18px 40px rgba(50,50,45,.13);
-}
-
-.sketch {
-    font-family: Georgia, serif;
-    color: #555852;
-    text-align: center;
-    font-size: 23px;
-    line-height: 1.9;
-}
-
-.sketch-dress {
-    font-size: 80px;
-    color: var(--verde);
-}
-
-.visual-words {
-    position: absolute;
-    bottom: 34px;
-    right: 35px;
-    text-align: right;
-    font-size: 10px;
-    letter-spacing: 4px;
-    color: #50534d;
+.btn-secondary:hover{
+    background:var(--verde-claro);
 }
 
 
 /* =========================
-   SECCIONES GENERALES
+   COMPOSICIÓN VISUAL HERO
 ========================= */
 
-section {
-    padding: 78px 7%;
+.hero-image{
+    min-height:555px;
+    position:relative;
+    overflow:hidden;
+
+    background:
+        linear-gradient(120deg,
+        #f5f3eb 0%,
+        #ebe9df 55%,
+        #d9d9cf 100%);
 }
 
-.section-title {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 27px;
+/* tela clara */
+
+.fabric{
+    position:absolute;
+    width:70%;
+    height:120%;
+    left:-10%;
+    top:-10%;
+    background:
+        repeating-linear-gradient(
+        115deg,
+        rgba(255,255,255,.75) 0px,
+        rgba(255,255,255,.75) 3px,
+        rgba(232,230,220,.65) 4px,
+        rgba(255,255,255,.75) 8px
+        );
+    transform:rotate(8deg);
+    opacity:.8;
 }
 
-.section-title h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 36px;
-    font-weight: normal;
+/* rama discreta */
+
+.branch{
+    position:absolute;
+    width:260px;
+    height:420px;
+    left:5%;
+    top:-40px;
+    transform:rotate(-18deg);
 }
 
-.section-title span {
-    width: 48px;
-    height: 2px;
-    background: var(--verde);
+.stem{
+    position:absolute;
+    width:4px;
+    height:430px;
+    background:#71654b;
+    left:120px;
+    top:0;
+    border-radius:10px;
 }
 
-.section-intro {
-    max-width: 800px;
-    font-size: 16px;
-    color: #555852;
+.leaf{
+    position:absolute;
+    width:66px;
+    height:35px;
+    background:#688c3b;
+    border-radius:80% 10% 80% 10%;
+    opacity:.93;
+}
+
+.l1{top:35px;left:68px;transform:rotate(-25deg);}
+.l2{top:88px;left:118px;transform:rotate(25deg);}
+.l3{top:142px;left:60px;transform:rotate(-35deg);}
+.l4{top:200px;left:122px;transform:rotate(28deg);}
+.l5{top:263px;left:62px;transform:rotate(-30deg);}
+.l6{top:325px;left:118px;transform:rotate(28deg);}
+
+
+/* hoja de boceto */
+
+.sketch-paper{
+    position:absolute;
+    width:43%;
+    height:72%;
+    right:15%;
+    top:11%;
+    background:#fffefb;
+    transform:rotate(3deg);
+    box-shadow:0 18px 40px rgba(58,58,50,.15);
+    padding:36px 30px;
+}
+
+.dress-sketch{
+    position:relative;
+    height:72%;
+    min-height:260px;
+}
+
+/* cabeza */
+
+.head{
+    position:absolute;
+    width:27px;
+    height:33px;
+    border:1.5px solid #65665f;
+    border-radius:50%;
+    left:42%;
+    top:4%;
+}
+
+/* cuello */
+
+.neck{
+    position:absolute;
+    width:12px;
+    height:20px;
+    border-left:1px solid #666;
+    border-right:1px solid #666;
+    left:44.5%;
+    top:15%;
+}
+
+/* cuerpo */
+
+.body-line{
+    position:absolute;
+    width:72px;
+    height:90px;
+    border-left:1.5px solid #666;
+    border-right:1.5px solid #666;
+    left:34%;
+    top:20%;
+    clip-path:polygon(30% 0,70% 0,100% 100%,0 100%);
+}
+
+/* falda */
+
+.skirt{
+    position:absolute;
+    width:155px;
+    height:155px;
+    left:19%;
+    top:45%;
+    border-left:1.5px solid #666;
+    border-right:1.5px solid #666;
+    border-bottom:1.5px solid #666;
+    clip-path:polygon(35% 0,65% 0,100% 100%,0 100%);
+}
+
+/* líneas de dibujo */
+
+.skirt::before,
+.skirt::after{
+    content:"";
+    position:absolute;
+    height:150px;
+    width:1px;
+    background:#aaa;
+    top:3px;
+}
+
+.skirt::before{
+    left:36%;
+    transform:rotate(8deg);
+}
+
+.skirt::after{
+    right:36%;
+    transform:rotate(-8deg);
+}
+
+/* brazos */
+
+.arm-left,
+.arm-right{
+    position:absolute;
+    height:120px;
+    width:1px;
+    background:#777;
+    top:24%;
+}
+
+.arm-left{
+    left:31%;
+    transform:rotate(15deg);
+}
+
+.arm-right{
+    left:59%;
+    transform:rotate(-15deg);
+}
+
+
+/* palabras del boceto */
+
+.sketch-words{
+    position:absolute;
+    right:7%;
+    top:30%;
+    font-family:Georgia,serif;
+    font-style:italic;
+    color:#696a64;
+    font-size:16px;
+    line-height:1.7;
+    transform:rotate(-3deg);
+}
+
+.hero-label{
+    position:absolute;
+    right:5%;
+    bottom:7%;
+    text-align:right;
+    font-size:9px;
+    letter-spacing:4px;
+    color:#4d514b;
+}
+
+.hero-label::before{
+    content:"";
+    display:block;
+    width:42px;
+    height:1px;
+    background:white;
+    margin:0 0 10px auto;
+}
+
+
+/* verde de tela inferior */
+
+.green-fabric{
+    position:absolute;
+    width:43%;
+    height:33%;
+    right:-10%;
+    bottom:-8%;
+    background:#697b56;
+    transform:rotate(-11deg);
+    opacity:.88;
 }
 
 
 /* =========================
-   SOBRE MÍ
+   SECCIONES
 ========================= */
 
-.about {
-    background: white;
+section{
+    padding:65px 7%;
 }
 
-.about-layout {
-    display: grid;
-    grid-template-columns: .8fr 1.2fr;
-    gap: 70px;
-    align-items: center;
+.section-heading{
+    display:flex;
+    align-items:center;
+    gap:17px;
+    margin-bottom:18px;
 }
 
-.nature-card {
-    min-height: 350px;
+.section-heading h2{
+    font-family:Georgia,serif;
+    font-weight:normal;
+    font-size:34px;
+}
+
+.section-heading span{
+    width:45px;
+    height:1.5px;
+    background:var(--verde);
+}
+
+
+/* =========================
+   SOBRE MI
+========================= */
+
+.about{
+    display:grid;
+    grid-template-columns:36% 64%;
+    padding:0;
+    background:white;
+}
+
+.about-visual{
+    min-height:350px;
+    position:relative;
+    overflow:hidden;
     background:
-        linear-gradient(rgba(255,255,255,.05), rgba(255,255,255,.05)),
-        linear-gradient(135deg, #e6e8df, #cfd5c7);
-    position: relative;
-    overflow: hidden;
+       radial-gradient(circle at 15% 15%,#7b964f 0 6%,transparent 7%),
+       linear-gradient(130deg,#d9d5c7,#aaa48f);
 }
 
-.nature-card::before {
-    content: "❧";
-    position: absolute;
-    color: rgba(70,115,35,.55);
-    font-size: 300px;
-    left: -30px;
-    top: -75px;
-    transform: rotate(-20deg);
+.about-fabric{
+    position:absolute;
+    inset:0;
+    background:
+       repeating-linear-gradient(
+       45deg,
+       rgba(255,255,255,.09) 0,
+       rgba(255,255,255,.09) 2px,
+       rgba(40,40,35,.04) 3px,
+       rgba(255,255,255,.09) 6px
+       );
 }
 
-.fabric-label {
-    background: #e8e5db;
-    border: 1px solid #c8c4b9;
-    padding: 30px 28px;
-    position: absolute;
-    width: 220px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%) rotate(-4deg);
-    text-align: center;
-    letter-spacing: 2px;
-    font-size: 12px;
-    box-shadow: 0 8px 20px rgba(50,50,45,.1);
+.fabric-tag{
+    position:absolute;
+    width:210px;
+    padding:27px 20px;
+    background:#e8e2d3;
+    border:1px solid #c4beaf;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%) rotate(5deg);
+    text-align:center;
+    font-size:11px;
+    letter-spacing:2px;
+    box-shadow:0 8px 20px rgba(40,40,35,.16);
 }
 
-.fabric-label strong {
-    color: var(--verde-oscuro);
+.tag-leaf{
+    font-size:24px;
+    color:var(--verde);
 }
 
-.values {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-top: 38px;
+.about-content{
+    padding:55px 7%;
 }
 
-.value {
-    text-align: center;
-    color: var(--gris);
-    font-size: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+.about-content > p{
+    max-width:690px;
+    color:#555852;
+    font-size:14px;
 }
 
-.value-icon {
-    display: block;
-    font-size: 28px;
-    color: var(--verde);
-    margin-bottom: 8px;
+.values{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-top:35px;
+}
+
+.value{
+    text-align:center;
+    font-size:9px;
+    letter-spacing:1.4px;
+    text-transform:uppercase;
+    color:#60635e;
+}
+
+.value-icon{
+    display:block;
+    color:var(--verde);
+    font-size:29px;
+    margin-bottom:7px;
 }
 
 
@@ -382,34 +554,29 @@ section {
    HABILIDADES
 ========================= */
 
-.skills-section {
-    background: var(--blanco-calido);
+.skills-section{
+    background:var(--blanco-calido);
 }
 
-.skill-group {
-    margin-top: 28px;
+.skill-title{
+    font-size:9px;
+    letter-spacing:3px;
+    color:#62655f;
+    margin:19px 0 10px;
 }
 
-.skill-label {
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: var(--gris);
-    margin-bottom: 13px;
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
 }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skill {
-    background: var(--piedra);
-    border: 1px solid #e6e6df;
-    padding: 8px 14px;
-    border-radius: 7px;
-    font-size: 12px;
-    color: #4c4f49;
+.skill{
+    background:var(--piedra-claro);
+    border-radius:20px;
+    padding:7px 14px;
+    font-size:11px;
+    color:#555852;
 }
 
 
@@ -417,139 +584,150 @@ section {
    PROYECTOS
 ========================= */
 
-.projects-section {
-    background: white;
+.projects{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-.projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 27px;
+.project{
+    border:1px solid #dedfd9;
+    border-radius:6px;
+    overflow:hidden;
+    background:white;
+    transition:.25s;
 }
 
-.project {
-    border: 1px solid #e5e5df;
-    background: white;
-    border-radius: 5px;
-    overflow: hidden;
-    transition: .25s;
+.project:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(50,55,45,.10);
 }
 
-.project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(60,65,55,.09);
+.project-photo{
+    height:180px;
+    position:relative;
+    overflow:hidden;
 }
 
-.project-image {
-    height: 180px;
-    background: linear-gradient(145deg, #eef0e9, #d5dacd);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+.wallet{
+    background:
+       linear-gradient(120deg,rgba(80,115,45,.20),transparent 40%),
+       linear-gradient(135deg,#dadfd4,#f4f2eb);
 }
 
-.project-image::before {
-    content: "⌨";
-    font-size: 65px;
-    color: var(--verde-oscuro);
+.wallet::before{
+    content:"DATABASE";
+    position:absolute;
+    background:#292d2a;
+    color:#e8f0df;
+    padding:27px 34px;
+    font-family:monospace;
+    left:22%;
+    top:37%;
+    box-shadow:0 10px 20px rgba(0,0,0,.18);
 }
 
-.project:nth-child(2) .project-image::before {
-    content: "✓";
+.smart{
+    background:
+       linear-gradient(120deg,#e2e0d4 0 55%,#f6f5ef 55%);
 }
 
-.project:nth-child(3) .project-image::before {
-    content: "{ }";
+.smart::before{
+    content:"Plan\\AOrganiza\\AEjecuta\\ALogra";
+    white-space:pre;
+    position:absolute;
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-size:18px;
+    line-height:1.45;
+    left:35%;
+    top:22%;
+    color:#50534e;
 }
 
-.project-image::after {
-    content: "";
-    width: 120px;
-    height: 120px;
-    background: rgba(99,149,40,.12);
-    border-radius: 50%;
-    position: absolute;
-    right: -25px;
-    top: -30px;
+.spring{
+    background:#242b29;
 }
 
-.project-content {
-    padding: 24px;
+.spring::before{
+    content:"public class SpringEduManager {\\A    @GetMapping\\A    @Service\\A    @Repository\\A}";
+    white-space:pre;
+    position:absolute;
+    color:#a8ce7a;
+    font-family:monospace;
+    left:10%;
+    top:20%;
+    line-height:1.8;
 }
 
-.project h3 {
-    font-family: Georgia, serif;
-    font-size: 22px;
-    font-weight: normal;
-    margin-bottom: 10px;
+.project-content{
+    padding:20px;
 }
 
-.project p {
-    color: var(--gris);
-    font-size: 13px;
-    min-height: 90px;
+.project h3{
+    font-family:Georgia,serif;
+    font-weight:normal;
+    font-size:21px;
 }
 
-.tags {
-    margin: 14px 0;
+.project p{
+    font-size:12px;
+    color:#62645f;
+    min-height:76px;
+    margin-top:6px;
 }
 
-.tag {
-    display: inline-block;
-    background: var(--piedra);
-    padding: 5px 9px;
-    margin: 3px 3px 0 0;
-    border-radius: 5px;
-    font-size: 10px;
+.tags{
+    margin:12px 0;
 }
 
-.github-link {
-    color: var(--verde-oscuro);
-    font-size: 12px;
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 1px solid var(--verde);
+.tag{
+    display:inline-block;
+    padding:5px 9px;
+    background:var(--piedra-claro);
+    border-radius:12px;
+    font-size:9px;
+    margin:2px;
 }
 
-.github-link:hover {
-    color: var(--verde-vivo);
+.project-link{
+    font-size:11px;
+    color:var(--verde-oscuro);
+    text-decoration:none;
+    border-bottom:1px solid var(--verde);
 }
 
 
 /* =========================
-   CASO DE ESTUDIO
+   CASO
 ========================= */
 
-.case-study {
-    background: var(--verde-suave);
+.case{
+    background:var(--verde-claro);
 }
 
-.case-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 35px;
-    margin-top: 35px;
+.case-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:28px;
 }
 
-.case-box {
-    background: rgba(255,255,255,.82);
-    padding: 28px;
-    border-left: 3px solid var(--verde);
+.case-card{
+    background:rgba(255,255,255,.82);
+    padding:25px;
+    border-left:3px solid var(--verde);
 }
 
-.case-box h3 {
-    font-family: Georgia, serif;
-    font-size: 20px;
-    font-weight: normal;
-    margin-bottom: 10px;
-    color: var(--verde-oscuro);
+.case-card h3{
+    font-family:Georgia,serif;
+    font-weight:normal;
+    margin-bottom:8px;
 }
 
-.case-box p {
-    font-size: 13px;
-    color: #565a53;
+.case-card p{
+    font-size:12px;
+    color:#62645f;
 }
 
 
@@ -557,49 +735,39 @@ section {
    FORMACIÓN
 ========================= */
 
-.education {
-    background: var(--blanco-calido);
+.education{
+    background:white;
 }
 
-.timeline {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    border-top: 1px solid #c8cac3;
-    margin-top: 45px;
+.timeline{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    margin-top:30px;
+    border-top:1px solid #bfc1ba;
 }
 
-.timeline-item {
-    position: relative;
-    padding: 25px 18px 0 10px;
-    border-left: 1px solid #dedfd9;
-    min-height: 150px;
+.timeline-item{
+    padding:21px 14px;
+    position:relative;
+    font-size:11px;
+    color:#60635e;
 }
 
-.timeline-item::before {
-    content: "";
-    width: 9px;
-    height: 9px;
-    background: var(--verde);
-    border-radius: 50%;
-    position: absolute;
-    top: -5px;
-    left: -5px;
+.timeline-item::before{
+    content:"";
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:var(--verde);
+    border-radius:50%;
+    top:-4px;
+    left:0;
 }
 
-.year {
-    font-size: 12px;
-    color: var(--gris);
-}
-
-.timeline-item strong {
-    display: block;
-    font-size: 13px;
-    margin: 4px 0;
-}
-
-.timeline-item p {
-    font-size: 12px;
-    color: var(--gris);
+.timeline-item strong{
+    color:#343733;
+    display:block;
+    margin-top:3px;
 }
 
 
@@ -607,41 +775,42 @@ section {
    CONTACTO
 ========================= */
 
-.contact {
-    background: white;
+.contact{
+    background:var(--blanco-calido);
 }
 
-.contact-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    align-items: center;
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:45px;
+    align-items:center;
 }
 
-.handwritten {
-    font-family: Georgia, serif;
-    font-style: italic;
-    font-size: 22px;
-    color: var(--verde-oscuro);
+.contact-hand{
+    font-family:Georgia,serif;
+    font-size:20px;
+    font-style:italic;
+    color:var(--verde-oscuro);
 }
 
-.contact h2 {
-    font-family: Georgia, serif;
-    font-size: 30px;
-    font-weight: normal;
-    margin-bottom: 13px;
+.contact h2{
+    font-family:Georgia,serif;
+    font-weight:normal;
+    font-size:27px;
 }
 
 .contact p,
-.contact a {
-    font-size: 13px;
-    color: #555852;
+.contact a{
+    font-size:12px;
+    color:#60635e;
+    text-decoration:none;
 }
 
-.quote {
-    font-family: Georgia, serif;
-    font-size: 20px !important;
-    color: var(--grafito) !important;
+.contact-quote{
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-size:18px !important;
+    color:#40433f !important;
 }
 
 
@@ -649,66 +818,60 @@ section {
    FOOTER
 ========================= */
 
-footer {
-    background: var(--piedra);
-    padding: 25px 7%;
-    text-align: center;
-    font-size: 10px;
-    color: var(--gris);
-    letter-spacing: 1px;
+footer{
+    padding:22px;
+    text-align:center;
+    background:#eeeeea;
+    color:#777a74;
+    font-size:9px;
+    letter-spacing:1px;
 }
 
 
 /* =========================
-   CELULAR
+   RESPONSIVE
 ========================= */
 
-@media(max-width: 850px) {
+@media(max-width:850px){
 
-    .nav-links {
-        display: none;
+    .nav-links{
+        display:none;
     }
 
-    .hero {
-        grid-template-columns: 1fr;
+    .hero{
+        grid-template-columns:1fr;
     }
 
-    .hero-visual {
-        min-height: 420px;
+    .hero-image{
+        min-height:470px;
     }
 
-    .about-layout {
-        grid-template-columns: 1fr;
+    .about{
+        grid-template-columns:1fr;
     }
 
-    .projects {
-        grid-template-columns: 1fr;
+    .projects,
+    .case-grid{
+        grid-template-columns:1fr;
     }
 
-    .case-grid {
-        grid-template-columns: 1fr;
+    .values{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .timeline {
-        grid-template-columns: 1fr;
-        border-top: none;
-        border-left: 1px solid #ccc;
+    .timeline{
+        grid-template-columns:1fr;
+        border-top:none;
+        border-left:1px solid #bbb;
     }
 
-    .timeline-item {
-        border-left: none;
+    .contact-grid{
+        grid-template-columns:1fr;
     }
 
-    .timeline-item::before {
-        top: 28px;
-    }
-
-    .values {
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .contact-layout {
-        grid-template-columns: 1fr;
+    .sketch-paper{
+        width:55%;
+        right:9%;
     }
 }
 
@@ -717,27 +880,25 @@ footer {
 
 <body>
 
-
-<!-- NAVEGACIÓN -->
-
 <nav>
 
 <div class="brand">
-    <div class="leaf-logo">♧</div>
-    <div>
-        <div class="brand-name">VALERIA IBARRA</div>
-        <span class="brand-small">DISEÑO + TECNOLOGÍA</span>
-    </div>
+<div class="brand-leaf">♧</div>
+
+<div>
+<div class="brand-name">VALERIA IBARRA</div>
+<span class="brand-small">DISEÑO + TECNOLOGÍA</span>
+</div>
 </div>
 
 <div class="nav-links">
-    <a href="#inicio">Inicio</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#habilidades">Habilidades</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#formacion">Formación</a>
-    <a href="#contacto">Contacto</a>
-    <a class="nav-button" href="#contacto">Conectemos →</a>
+<a href="#inicio">Inicio</a>
+<a href="#sobre-mi">Sobre mí</a>
+<a href="#habilidades">Habilidades</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#formacion">Formación</a>
+<a href="#contacto">Contacto</a>
+<a href="#contacto" class="nav-contact">Conectemos →</a>
 </div>
 
 </nav>
@@ -745,22 +906,27 @@ footer {
 
 <!-- PORTADA -->
 
-<header id="inicio" class="hero">
+<header class="hero" id="inicio">
 
-<div class="hero-text">
+<div class="hero-info">
 
 <p class="eyebrow">
 DISEÑO · TECNOLOGÍA · IMPACTO REAL
 </p>
 
-<h1>Valeria<br>Ibarra</h1>
+<h1>
+Valeria<br>
+Ibarra
+</h1>
 
-<div class="green-line"></div>
+<div class="hero-slogan">
+<div class="hero-line"></div>
 
-<p class="hero-message">
+<p>
 Diseño ideas.<br>
 Desarrollo soluciones.
 </p>
+</div>
 
 <p class="hero-description">
 Diseñadora de Vestuario con más de 10 años de experiencia en
@@ -769,32 +935,58 @@ Actualmente en formación Full Stack Java, uniendo creatividad,
 diseño y tecnología para crear soluciones con sentido.
 </p>
 
-<div class="buttons">
-<a class="button" href="#proyectos">
+<div class="hero-buttons">
+
+<a href="#proyectos" class="btn btn-primary">
 Ver mis proyectos →
 </a>
 
-<a class="button button-outline" href="#sobre-mi">
+<a href="#sobre-mi" class="btn btn-secondary">
 Conoce más
 </a>
-</div>
 
 </div>
 
+</div>
 
-<div class="hero-visual">
 
-<div class="sketch-card">
-<div class="sketch">
-<div class="sketch-dress">♧</div>
+<div class="hero-image">
+
+<div class="fabric"></div>
+
+<div class="branch">
+<div class="stem"></div>
+<div class="leaf l1"></div>
+<div class="leaf l2"></div>
+<div class="leaf l3"></div>
+<div class="leaf l4"></div>
+<div class="leaf l5"></div>
+<div class="leaf l6"></div>
+</div>
+
+<div class="green-fabric"></div>
+
+<div class="sketch-paper">
+
+<div class="dress-sketch">
+<div class="head"></div>
+<div class="neck"></div>
+<div class="body-line"></div>
+<div class="skirt"></div>
+<div class="arm-left"></div>
+<div class="arm-right"></div>
+</div>
+
+<div class="sketch-words">
 Diseña<br>
 Crea<br>
 Desarrolla<br>
 Transforma
 </div>
+
 </div>
 
-<div class="visual-words">
+<div class="hero-label">
 MODA<br>
 TECNOLOGÍA<br>
 SUSTENTABILIDAD
@@ -807,30 +999,29 @@ SUSTENTABILIDAD
 
 <!-- SOBRE MI -->
 
-<section id="sobre-mi" class="about">
+<section class="about" id="sobre-mi">
 
-<div class="about-layout">
+<div class="about-visual">
+<div class="about-fabric"></div>
 
-<div class="nature-card">
-
-<div class="fabric-label">
-<strong>IDEAS</strong><br>
+<div class="fabric-tag">
+<div class="tag-leaf">♧</div>
+IDEAS<br>
 PERSONAS<br>
 MATERIALES<br><br>
 UN FUTURO MEJOR
 </div>
-
 </div>
 
 
-<div>
+<div class="about-content">
 
-<div class="section-title">
+<div class="section-heading">
 <h2>Sobre mí</h2>
 <span></span>
 </div>
 
-<p class="section-intro">
+<p>
 Creo en el poder del diseño y la tecnología para generar un impacto
 positivo. Mi experiencia en vestuario me ha enseñado a observar
 necesidades, resolver problemas y transformar ideas en productos
@@ -864,23 +1055,21 @@ Soluciones<br>del mundo real
 
 </div>
 
-</div>
-
 </section>
 
 
 <!-- HABILIDADES -->
 
-<section id="habilidades" class="skills-section">
+<section class="skills-section" id="habilidades">
 
-<div class="section-title">
+<div class="section-heading">
 <h2>Habilidades</h2>
 <span></span>
 </div>
 
-<div class="skill-group">
-
-<div class="skill-label">HERRAMIENTAS TÉCNICAS</div>
+<div class="skill-title">
+HERRAMIENTAS TÉCNICAS
+</div>
 
 <div class="skills">
 <span class="skill">Java</span>
@@ -894,12 +1083,9 @@ Soluciones<br>del mundo real
 <span class="skill">API REST</span>
 </div>
 
+<div class="skill-title">
+COMPETENCIAS
 </div>
-
-
-<div class="skill-group">
-
-<div class="skill-label">COMPETENCIAS</div>
 
 <div class="skills">
 <span class="skill">Diseño de productos</span>
@@ -910,28 +1096,23 @@ Soluciones<br>del mundo real
 <span class="skill">Experiencia de usuario</span>
 </div>
 
-</div>
-
 </section>
 
 
 <!-- PROYECTOS -->
 
-<section id="proyectos" class="projects-section">
+<section id="proyectos">
 
-<div class="section-title">
+<div class="section-heading">
 <h2>Proyectos</h2>
 <span></span>
 </div>
 
 <div class="projects">
 
-
-<!-- ALKE WALLET -->
-
 <article class="project">
 
-<div class="project-image"></div>
+<div class="project-photo wallet"></div>
 
 <div class="project-content">
 
@@ -948,7 +1129,8 @@ incluyendo modelo de datos, script SQL y diagrama entidad-relación.
 <span class="tag">Modelo ER</span>
 </div>
 
-<a class="github-link"
+<a
+class="project-link"
 href="https://github.com/valeriaib-stack/AlkeWallet-Database"
 target="_blank">
 Ver en GitHub →
@@ -958,19 +1140,17 @@ Ver en GitHub →
 </article>
 
 
-<!-- SMART TASK -->
-
 <article class="project">
 
-<div class="project-image"></div>
+<div class="project-photo smart"></div>
 
 <div class="project-content">
 
 <h3>SmartTask</h3>
 
 <p>
-Aplicación desarrollada en Java para gestionar tareas, utilizando
-programación orientada a objetos con clases, herencia e interfaces.
+Aplicación en Java para gestionar tareas utilizando programación
+orientada a objetos con clases, herencia e interfaces.
 </p>
 
 <div class="tags">
@@ -979,7 +1159,8 @@ programación orientada a objetos con clases, herencia e interfaces.
 <span class="tag">Eclipse</span>
 </div>
 
-<a class="github-link"
+<a
+class="project-link"
 href="https://github.com/valeriaib-stack/SmartTask"
 target="_blank">
 Ver en GitHub →
@@ -989,11 +1170,9 @@ Ver en GitHub →
 </article>
 
 
-<!-- SPRING EDU MANAGER -->
-
 <article class="project">
 
-<div class="project-image"></div>
+<div class="project-photo spring"></div>
 
 <div class="project-content">
 
@@ -1011,7 +1190,8 @@ integrando seguridad, persistencia y servicios API REST.
 <span class="tag">API REST</span>
 </div>
 
-<a class="github-link"
+<a
+class="project-link"
 href="https://github.com/valeriaib-stack/SpringEduManager"
 target="_blank">
 Ver en GitHub →
@@ -1027,22 +1207,22 @@ Ver en GitHub →
 
 <!-- CASO DE ESTUDIO -->
 
-<section class="case-study">
+<section class="case">
 
-<div class="section-title">
+<div class="section-heading">
 <h2>Caso de estudio · SpringEduManager</h2>
 <span></span>
 </div>
 
-<p class="section-intro">
+<p>
 Uno de los proyectos que mejor representa mi evolución durante la
 formación Full Stack Java.
 </p>
 
 <div class="case-grid">
 
-<div class="case-box">
-<h3>El desafío</h3>
+<div class="case-card">
+<h3>◎ &nbsp; El desafío</h3>
 <p>
 Pasar desde ejercicios individuales de programación hacia una
 aplicación web estructurada, comprendiendo la interacción entre
@@ -1050,8 +1230,8 @@ los diferentes componentes de Spring Boot.
 </p>
 </div>
 
-<div class="case-box">
-<h3>La solución</h3>
+<div class="case-card">
+<h3>☼ &nbsp; La solución</h3>
 <p>
 Desarrollé progresivamente controladores, rutas, persistencia,
 seguridad y servicios, realizando pruebas durante cada etapa
@@ -1059,8 +1239,8 @@ del proyecto.
 </p>
 </div>
 
-<div class="case-box">
-<h3>El aprendizaje</h3>
+<div class="case-card">
+<h3>♧ &nbsp; El aprendizaje</h3>
 <p>
 Profundicé en arquitectura MVC, persistencia de datos,
 controladores REST y seguridad mediante roles, integrando
@@ -1075,9 +1255,9 @@ distintos conocimientos en una sola aplicación.
 
 <!-- FORMACIÓN -->
 
-<section id="formacion" class="education">
+<section class="education" id="formacion">
 
-<div class="section-title">
+<div class="section-heading">
 <h2>Formación</h2>
 <span></span>
 </div>
@@ -1085,34 +1265,34 @@ distintos conocimientos en una sola aplicación.
 <div class="timeline">
 
 <div class="timeline-item">
-<span class="year">2026</span>
+2026
 <strong>Desarrollo Full Stack Java</strong>
-<p>Talento Digital para Chile</p>
-<p>En curso</p>
+Talento Digital para Chile<br>
+En curso
 </div>
 
 <div class="timeline-item">
-<span class="year">2024</span>
+2024
 <strong>UX: Empatizar, Definir e Idear</strong>
 </div>
 
 <div class="timeline-item">
-<span class="year">2023</span>
+2023
 <strong>Tecnologías para Industrias Creativas</strong>
-<p>Metaspark AR</p>
+Metaspark AR
 </div>
 
 <div class="timeline-item">
-<span class="year">2009</span>
+2009
 <strong>Diseño de Vestuario</strong>
-<p>AIEP</p>
-<p>Mención Alta Costura</p>
+AIEP<br>
+Mención Alta Costura
 </div>
 
 <div class="timeline-item">
-<span class="year">Idiomas</span>
+Idiomas
 <strong>Inglés</strong>
-<p>Intermedio</p>
+Intermedio
 </div>
 
 </div>
@@ -1122,33 +1302,37 @@ distintos conocimientos en una sola aplicación.
 
 <!-- CONTACTO -->
 
-<section id="contacto" class="contact">
+<section class="contact" id="contacto">
 
-<div class="contact-layout">
+<div class="contact-grid">
 
-<div class="handwritten">
-Ropa con historia.<br>
-Tecnología con propósito.
+<div class="contact-hand">
+♧ &nbsp; Ropa con historia.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tecnología con propósito.
 </div>
 
 <div>
+
 <h2>Conectemos</h2>
+
 <p>✉ valeriaibarrabaeza@gmail.com</p>
 <p>⌖ Santiago, Chile</p>
 
 <p>
-<a href="https://github.com/valeriaib-stack"
-target="_blank">
-GitHub · valeriaib-stack
+<a href="https://github.com/valeriaib-stack" target="_blank">
+● github.com/valeriaib-stack
 </a>
 </p>
+
 </div>
 
 <div>
-<p class="quote">
+
+<p class="contact-quote">
 “Un futuro más creativo,<br>
 tecnológico y sostenible es posible.”
 </p>
+
 </div>
 
 </div>
@@ -1159,7 +1343,6 @@ tecnológico y sostenible es posible.”
 <footer>
 © 2026 Valeria Ibarra · Diseño + Tecnología · Portafolio Profesional
 </footer>
-
 
 </body>
 </html>
